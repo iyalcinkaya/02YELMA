@@ -5,25 +5,26 @@ Welcome to the repository for **02YELMA: Electricity and Magnetism**. Here you c
 * If you are taking the course for the first time, reading the [SYLLABUS](./syllabus/main.pdf) is strongly recommended.
 * The handwritten lecture notes are mostly derived from the textbook by David J. Griffiths, *Introduction to Electrodynamics* (3th edition). Students are encouraged to read the textbook for a more detailed explanation of the topics covered in the course.
 * The homework is provided for self study. Students are not required to return their solutions, but they are encouraged to work on them to better understand the material.
+* The material will be updated during the term. Please check the repository regulary for changes.
 
 If you wish to download all materials at once, you can click the green `<> Code` button at the top of this repository and select "Download ZIP", or clone the repository via Git.
 
 ## Course Materials
 
 
-| Chapter                             |                       Lecture Notes                       |                        Homework                        |                            Solutions                            |
-| :------------------------------------ | :---------------------------------------------------------: | :-------------------------------------------------------: | :---------------------------------------------------------------: |
-| **1. Mathematical tools**           |      [📝 View Notes](./notes/mathematical_tools.pdf)      |  [📄 View HW](./homework/mathematical-tools/main.pdf)  |  [✅ View Solution](./solutions/1_Mathematical_tools_SOL.pdf)  |
-| **2. Electrostatics**               |        [📝 View Notes](./notes/electrostatics.pdf)        |    [📄 View HW](./homework/electrostatics/main.pdf)    |    [✅ View Solution](./solutions/2_Electrostatics_SOL.pdf)    |
-| **3. Magnetostatics**               |        [📝 View Notes](./notes/magnetostatics.pdf)        |    [📄 View HW](./homework/magnetostatics/main.pdf)    |    [✅ View Solution](./solutions/3_Magnetostatics_SOL.pdf)    |
-| **4. Electrodynamics**              |       [📝 View Notes](./notes/electrodynamics.pdf)       |    [📄 View HW](./homework/electrodynamics/main.pdf)    |    [✅ View Solution](./solutions/4_Electrodynamics_SOL.pdf)    |
-| **5. Electromagnetic Waves**        |    [📝 View Notes](./notes/electromagnetic_waves.pdf)    | [📄 View HW](./homework/5_Electromagnetic_Waves_HW.pdf) | [✅ View Solution](./solutions/5_Electromagnetic_Waves_SOL.pdf) |
-| **6. Special Theory of Relativity** | [📝 View Notes](./notes/special-theory-of-relativity.pdf) | [📄 View HW](./homework/6_Magnetism_Relativity_HW.pdf) | [✅ View Solution](./solutions/6_Magnetism_Relativity_SOL.pdf) |
+| Chapter                             |                       Lecture Notes                       |                            Homework                            | Solutions |
+| :------------------------------------ | :---------------------------------------------------------: | :--------------------------------------------------------------: | :---------: |
+| **1. Mathematical tools**           |      [📝 View Notes](./notes/mathematical-tools.pdf)      |      [📄 View HW](./homework/mathematical-tools/main.pdf)      |     -     |
+| **2. Electrostatics**               |        [📝 View Notes](./notes/electrostatics.pdf)        |        [📄 View HW](./homework/electrostatics/main.pdf)        |     -     |
+| **3. Magnetostatics**               |        [📝 View Notes](./notes/magnetostatics.pdf)        |        [📄 View HW](./homework/magnetostatics/main.pdf)        |     -     |
+| **4. Electrodynamics**              |       [📝 View Notes](./notes/electrodynamics.pdf)       |       [📄 View HW](./homework/electrodynamics/main.pdf)       |     -     |
+| **5. Electromagnetic Waves**        |    [📝 View Notes](./notes/electromagnetic-waves.pdf)    |    [📄 View HW](./homework/electromagnetic-waves/main.pdf)    |     -     |
+| **6. Special Theory of Relativity** | [📝 View Notes](./notes/special-theory-of-relativity.pdf) | [📄 View HW](./homework/special-theory-of-relativity/main.pdf) |     -     |
 
 ## Recordings
 
 The lectures are recorded and are available on YouTube.
 
-[2024 - 2025](https://www.youtube.com/playlist?list=PLHcyKkvX9MRPpwlXAppDIPab1iJ0R7Jj-)
+<a href="https://www.youtube.com/playlist?list=PLHcyKkvX9MRPpwlXAppDIPab1iJ0R7Jj-" target = "_blank">2024-2025</a>
 
-[2025 - 2026](https://www.youtube.com/playlist?list=PLHcyKkvX9MRPH8ck_i3LEwDLgVIQksgi1)
+<a href="https://www.youtube.com/playlist?list=PLHcyKkvX9MRPH8ck_i3LEwDLgVIQksgi1" target = "_blank">2025-2026</a>
