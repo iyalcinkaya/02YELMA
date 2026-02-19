@@ -2,8 +2,6 @@
 
 Welcome to the repository for **02YELMA: Electricity and Magnetism**. 
 
-This course explores the fundamental principles of electromagnetism. We begin by establishing the necessary mathematical foundations (vector calculus) before diving into the core phenomena of stationary electric and magnetic fields (Electrostatics and Magnetostatics). From there, we explore time-varying fields (Electrodynamics), the propagation of light and radiation (Electromagnetic Waves), and finally, the elegant realization that magnetism is fundamentally a relativistic consequence of electricity.
-
 ## Course Materials
 
 You do not need to clone this repository to access the files. Simply click the links in the table below to view or download the handwritten lecture notes, homework assignments, and step-by-step solutions for each chapter.
