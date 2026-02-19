@@ -1,19 +1,29 @@
 # 02YELMA: Electricity and Magnetism
 
-Welcome to the repository for **02YELMA: Electricity and Magnetism**. 
+Welcome to the repository for **02YELMA: Electricity and Magnetism**. Here you can find all the material related with the course.
+
+* If you are taking the course for the first time, reading the [SYLLABUS](./syllabus/main.pdf) is strongly recommended.
+* The handwritten lecture notes are mostly derived from the textbook by David J. Griffiths, *Introduction to Electrodynamics* (3th edition). Students are encouraged to read the textbook for a more detailed explanation of the topics covered in the course.
+* The homework is provided for self study. Students are not required to return their solutions, but they are encouraged to work on them to better understand the material.
+
+If you wish to download all materials at once, you can click the green `<> Code` button at the top of this repository and select "Download ZIP", or clone the repository via Git.
 
 ## Course Materials
 
-You do not need to clone this repository to access the files. Simply click the links in the table below to view or download the handwritten lecture notes, homework assignments, and step-by-step solutions for each chapter.
 
-| Chapter | Lecture Notes | Homework | Solutions |
-| :--- | :---: | :---: | :---: |
-| **1. Mathematical tools** | [📝 View Notes](./notes/1_Mathematical_tools.pdf) | [📄 View HW](./homework/1_Mathematical_tools_HW.pdf) | [✅ View Solution](./solutions/1_Mathematical_tools_SOL.pdf) |
-| **2. Electrostatics** | [📝 View Notes](./notes/2_Electrostatics.pdf) | [📄 View HW](./homework/2_Electrostatics_HW.pdf) | [✅ View Solution](./solutions/2_Electrostatics_SOL.pdf) |
-| **3. Magnetostatics** | [📝 View Notes](./notes/3_Magnetostatics.pdf) | [📄 View HW](./homework/3_Magnetostatics_HW.pdf) | [✅ View Solution](./solutions/3_Magnetostatics_SOL.pdf) |
-| **4. Electrodynamics** | [📝 View Notes](./notes/4_Electrodynamics.pdf) | [📄 View HW](./homework/4_Electrodynamics_HW.pdf) | [✅ View Solution](./solutions/4_Electrodynamics_SOL.pdf) |
-| **5. Electromagnetic Waves** | [📝 View Notes](./notes/5_Electromagnetic_Waves.pdf) | [📄 View HW](./homework/5_Electromagnetic_Waves_HW.pdf) | [✅ View Solution](./solutions/5_Electromagnetic_Waves_SOL.pdf) |
-| **6. Magnetism as a relativistic phenomenon** | [📝 View Notes](./notes/6_Magnetism_Relativity.pdf) | [📄 View HW](./homework/6_Magnetism_Relativity_HW.pdf) | [✅ View Solution](./solutions/6_Magnetism_Relativity_SOL.pdf) |
+| Chapter                             |                       Lecture Notes                       |                        Homework                        |                            Solutions                            |
+| :------------------------------------ | :---------------------------------------------------------: | :-------------------------------------------------------: | :---------------------------------------------------------------: |
+| **1. Mathematical tools**           |      [📝 View Notes](./notes/mathematical_tools.pdf)      |  [📄 View HW](./homework/mathematical-tools/main.pdf)  |  [✅ View Solution](./solutions/1_Mathematical_tools_SOL.pdf)  |
+| **2. Electrostatics**               |        [📝 View Notes](./notes/electrostatics.pdf)        |    [📄 View HW](./homework/electrostatics/main.pdf)    |    [✅ View Solution](./solutions/2_Electrostatics_SOL.pdf)    |
+| **3. Magnetostatics**               |        [📝 View Notes](./notes/magnetostatics.pdf)        |    [📄 View HW](./homework/magnetostatics/main.pdf)    |    [✅ View Solution](./solutions/3_Magnetostatics_SOL.pdf)    |
+| **4. Electrodynamics**              |       [📝 View Notes](./notes/electrodynamics.pdf)       |    [📄 View HW](./homework/electrodynamics/main.pdf)    |    [✅ View Solution](./solutions/4_Electrodynamics_SOL.pdf)    |
+| **5. Electromagnetic Waves**        |    [📝 View Notes](./notes/electromagnetic_waves.pdf)    | [📄 View HW](./homework/5_Electromagnetic_Waves_HW.pdf) | [✅ View Solution](./solutions/5_Electromagnetic_Waves_SOL.pdf) |
+| **6. Special Theory of Relativity** | [📝 View Notes](./notes/special-theory-of-relativity.pdf) | [📄 View HW](./homework/6_Magnetism_Relativity_HW.pdf) | [✅ View Solution](./solutions/6_Magnetism_Relativity_SOL.pdf) |
 
----
-*Note: If you wish to download all materials at once, you can click the green `<> Code` button at the top of this repository and select "Download ZIP", or clone the repository via Git.*
+## Recordings
+
+The lectures are recorded and are available on YouTube.
+
+[2024 - 2025](https://www.youtube.com/playlist?list=PLHcyKkvX9MRPpwlXAppDIPab1iJ0R7Jj-)
+
+[2025 - 2026](https://www.youtube.com/playlist?list=PLHcyKkvX9MRPH8ck_i3LEwDLgVIQksgi1)

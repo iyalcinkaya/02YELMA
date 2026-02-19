@@ -1,0 +1,46 @@
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{geometry}
+\geometry{a4paper, margin=0.8in}
+\pagenumbering{gobble}
+
+\title{Homework assignment for 02YELMA \\ Chapter: Magnetostatics}
+\begin{document}
+\date{}
+\maketitle
+\vspace{-0.8in}
+
+\begin{enumerate}
+    \item Find the magnetic field in the center of a square loop, which carries a steady current $I$. Let $R$ be the distance from center to side (Hint: You may make use of the result we obtained in the lecture about the magnetic field created by a finite wire).
+
+    \item A steady current $I$ flows down a long cylindrical wire of radius $a$. Find the magnetic field, both inside and outside the wire, if the current is uniformly distributed over the outside surface of the wire.
+    
+    \item A circular wire loop, with radius $R$, lies in the $xy$ plane, centered at the origin, and carries a current $I$ running counterclockwise as viewed from the positive $z$ axis.
+    \begin{itemize}
+        \item[(a)] What is its magnetic dipole moment?
+        \item[(b)] What is the approximate magnetic field at points far from the origin?
+        \item[(c)] Recall the exact magnetic field expression derived for a circular loop for the $z$ axis by using the Biot-Savart law. Show that, for points on the $z$ axis, the answer you found for (b) is consistent with the exact field when $z\gg R$.
+    \end{itemize}
+    \item Consider Rutherford's atomic theory: A positive charge ($+e$) is located in the center, around which a negative charge ($-e$) orbits in a circular motion with radius $R$ and linear velocity $v$. Although technically this orbital motion does not constitute a steady current, in practice the period of motion is so short that it can be approximated as a steady current. If the negative charge rotates counterclockwise, as observed from the positive $z$ axis, what is the magnitude and direction of the orbital magnetic dipole moment in terms of $e$, $v$, and $R$?
+
+    \item Consider a uniformly magnetized sphere with magnetization $\vec{M}=M\hat{z}$ and radius $R$.
+    \begin{itemize}
+        \item [(a)] Calculate volume and surface bound currents, $\vec{J}_b$ and $\vec{K}_b$. (Hint: Consider the spherical coordinates while calculating the cross products)
+        \item [(b)] Think of a spherical shell with radius $R$ rotating about $z$ axis with constant angular velocity $\omega$. Note that the linear velocity of a point on the surface $\vec{v}$ must be a function of $\theta$ in spherical coordinates (as $\theta$ increases, the point on the sphere covers more distance per unit of time). Express $\vec{v}$ in terms of $\omega$, $R$, $\theta$ (don't forget its direction). 
+        \item [(c)] If the spherical shell in (b) has a surface charge density $\sigma$, find its surface current density $\vec{K}$.
+        \item [(d)] Compare $\vec{K}_b$, the bound surface current obtained for a uniformly magnetized sphere, and $K$, the surface current density of a rotating spherical shell with angular velocity $\omega$. Explain the analogy between these two cases. What is the relationship between $M$ and $\sigma$, $\omega$ and $R$? 
+        \item [(e)] Write down the magnetic dipole moment $\vec{m}$ of the magnetized sphere.
+    \end{itemize}
+    \item Utilize the insights gained from the preceding question regarding the magnetized sphere and the rotating spherical shell with a surface charge density to determine the equatorial linear velocity of an electron (assuming that electron is a rotating spherical shell). Refer to the classical radius for the electron as found in Homework 4. Compare your result with the speed of light.
+\end{enumerate}
+
+\underline{Given for 3}: The magnetic field created by a pure magnetic dipole:
+\begin{equation*}
+    \vec{B}_{dip}(r,\theta) = \frac{\mu_0 m}{4\pi r^3}\left[2\cos{\left(\theta\right)}\hat{r} + \sin{\left(\theta\right)}\hat{\theta}\right]
+\end{equation*}
+
+
+\end{document}

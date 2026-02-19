@@ -1,0 +1,38 @@
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{geometry}
+\geometry{a4paper, margin=0.8in}
+\pagenumbering{gobble}
+
+\title{Homework assignment for 02YELMA \\ Chapter: Mathematical tools}
+\begin{document}
+\date{}
+\maketitle
+\vspace{-0.8in}
+\begin{enumerate}
+    \item  Compute the gradient of the scalar field \(f(x, y, z) = xyz\). After calculating the gradient, describe its geometric interpretation at the point \((1, 1, 1)\) and explain how it relates to the rate of change of \(f\) in various directions from this point.
+    
+    \item Calculate the divergence of the vector field \(\vec{F}(x, y, z) = (x^2, -y^2, z^2)\). Interpret the physical meaning of your result. Discuss how the divergence at the point \((1, -1, 1)\) reflects the behavior of the vector field in terms of sources, sinks, or neutrality.
+    
+    \item  Determine the curl of the vector field \(\vec{F}(x, y, z) = (y, z, x)\). Explain the significance of your result in terms of the field's rotation. Illustrate what the curl at the point \((0, 0, 1)\) suggests about the rotational behavior of the vector field around this point.
+    \item  Prove the following vector identities:
+    \begin{itemize}
+        \item $\vec{\nabla}\times(\vec{\nabla}T)=0$
+        \item $\vec{\nabla}\cdot(\vec{\nabla}\times\vec{T})=0$
+    \end{itemize}
+    \item Are $(\vec{A}\times\vec{B})\times\vec{C}$ and $\vec{A}\times(\vec{B}\times\vec{C})$ equal? Justify your answer.
+   \item  Evaluate the line integral of the vector field \( \vec{F} = x\hat{x} + y\hat{y} \) along the closed path defined by the points $A(0,1)\rightarrow B(1,1)\rightarrow C(0,0)\rightarrow A(0,1)$.
+    
+    \item Evaluate the surface integral of the vector field \( \vec{F} = x\hat{x} + y\hat{y} + z\hat{z} \) over a sphere with radius $1$ centered at (0,0,0). If $\vec{F}$ describes the flux of a quantity, describe what information does the integral give us? (Hint: Consider spherical coordinates)
+    
+    \item  A cylinder is positioned on the xy plane and centered on the z-axis, with a height of 3 units and a radius of 1 unit. The mass density of the cylinder is determined by the function \( \rho(x,y,z) = x + y +z \). Calculate the total mass of the cylinder using the given mass density function. (Hint: Consider cylindrical coordinates)
+
+    \item Use the Divergence Theorem to evaluate the flux of the vector field $\vec{F} = x^2 \hat{i}~+~y^2 \hat{j}~+~z^2 \hat{k}$ outward through the surface of a cube with any vertex at the origin and with side length~$1$.
+
+    \item Use Stokes' Theorem to find the circulation of the vector field $\vec{F} = -y \hat{i} + x \hat{j} + z \hat{k}$ around the circle $x^2 + y^2 = 1$ in the plane $z = 1$.
+
+\end{enumerate}
+\end{document}

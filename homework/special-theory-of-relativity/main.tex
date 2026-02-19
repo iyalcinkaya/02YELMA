@@ -1,0 +1,55 @@
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{accents}
+\usepackage[thinc]{esdiff}
+\usepackage{indentfirst}
+\setlength{\parindent}{0pt}
+\geometry{a4paper, margin=0.8in}
+\pagenumbering{gobble}
+
+\title{Homework assignment for 02YELMA \\ Chapter: Special theory of relativity}
+\begin{document}
+\date{}
+\maketitle
+\vspace{-0.8in}
+
+In the special theory of relativity, just as the coordinates of events and forces transform according to Lorentz transformations between relatively moving frames of reference, so too do the electric and magnetic fields. Accordingly, the fields $\vec{E}$ and $\vec{B}$ in the reference frame $S$ appear as follows in a frame $S'$ moving with constant velocity $v$ along the x-axis relative to $S$:
+\[
+\vec{E} = \begin{pmatrix}
+E_x \\ E_y \\ E_z
+\end{pmatrix} \longrightarrow
+\vec{E}' = \begin{pmatrix}
+E'_x \\ E'_y \\ E'_z
+\end{pmatrix} = \begin{pmatrix}
+E_x \\ \gamma \left( E_y - v B_z \right)\\ \gamma \left( E_z + v B_y \right)
+\end{pmatrix}
+\]
+\[
+\vec{B} = \begin{pmatrix}
+B_x \\ B_y \\ B_z
+\end{pmatrix} \longrightarrow
+\vec{B}' = \begin{pmatrix}
+B'_x \\ B'_y \\ B'_z
+\end{pmatrix} = \begin{pmatrix}
+B_x \\ \gamma \left( B_y + \frac{v}{c^2} E_z \right) \\ \gamma \left( B_z - \frac{v}{c^2} E_y \right)
+\end{pmatrix}
+\]
+
+\noindent
+Assume that in the laboratory frame $S$, there is an electric field $\vec{E} = E_0 \hat{y}$ and no magnetic field $\vec{B} = 0$. An inertial observer $S'$ moves relative to $S$ with constant velocity $v$ along the $x$-axis.
+\begin{enumerate}
+    \item[(a)] Use the field transformation expressions given above for $\vec{E}$ and $\vec{B}$ to find the electric and magnetic fields $\vec{E}'$ and $\vec{B}'$ as measured in the frame $S'$.
+    \item[(b)] According to your result in (a), what does an observer in $S'$ measure for the electric field $\vec{E}'$ and the magnetic field $\vec{B}'$? Explain it.
+\item[(c)] What is the force $\vec{F}'=q\left(\vec{E}' + \vec{u}'\times \vec{B}'\right)$ acting on the particle in the frame $S'$? Remember that the velocity $\vec{u}'$ of the particle at time $t'$ is given by the vector $\vec{u}'=\begin{pmatrix}
+u'_x \\ u'_y \\ u'_z
+\end{pmatrix}$.
+    \item[(d)] (\textit{Hard-Optional}) At $t'=0$, a particle of charge $q$ and mass $m$ is at rest in the frame $S'$ at the origin, $\vec{u}'(0)=0$. Can you solve the equation of motions of the particle and obtain the velocity $\vec{u}'(t')$ of the particle in the frame $S'$? Explain in words why a purely electric field in one frame appears partly as a magnetic field in another, and how that “new” magnetic field influences the charged particle’s trajectory.
+
+\end{enumerate}
+
+\end{document}
