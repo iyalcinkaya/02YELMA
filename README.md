@@ -1,4 +1,6 @@
 # 02YELMA: Electricity and Magnetism
+![Electricity and Magnetism](./img/emt.png)
+
 
 Welcome to the repository for **02YELMA: Electricity and Magnetism**. Here you can find all the material related with the course.
 
@@ -22,11 +24,4 @@ If you wish to download all materials at once, you can click the green `<> Code`
 
 ## Recordings
 
-The lectures are recorded and are available on YouTube.
-
-<a href="https://www.youtube.com/playlist?list=PLHcyKkvX9MRPpwlXAppDIPab1iJ0R7Jj-" target = "_blank">2024-2025</a>
-
-
-[2024 - 2025](https://www.youtube.com/playlist?list=PLHcyKkvX9MRPpwlXAppDIPab1iJ0R7Jj-)
-
-[2025 - 2026](https://www.youtube.com/playlist?list=PLHcyKkvX9MRPH8ck_i3LEwDLgVIQksgi1)
+The lectures are recorded and are available on YouTube: [2025](https://www.youtube.com/playlist?list=PLHcyKkvX9MRPpwlXAppDIPab1iJ0R7Jj-), [2026](https://www.youtube.com/playlist?list=PLHcyKkvX9MRPH8ck_i3LEwDLgVIQksgi1)
