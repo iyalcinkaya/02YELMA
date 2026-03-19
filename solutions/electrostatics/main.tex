@@ -1,0 +1,504 @@
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{geometry}
+\geometry{a4paper, margin=0.8in}
+\pagenumbering{gobble}
+
+\title{Homework solutions for 02YELMA \\ Chapter: Electrostatics}
+\begin{document}
+\date{}
+\maketitle
+\vspace{-0.8in}
+
+\begin{enumerate}
+
+\item At the center, each charge produces an electric field of equal magnitude. Due to symmetry, the contributions cancel pairwise:
+\[
+\vec{E}_{\text{net}} = 0.
+\]
+
+If one charge is replaced by $-q$, symmetry is broken. The three $+q$ charges and one $-q$ charge no longer cancel. The resulting field points toward the negative charge. By summing vector contributions, the magnitude is:
+\[
+E = \frac{1}{4\pi\varepsilon_0}\frac{2\sqrt{2}\,q}{a^2}.
+\]
+
+The force on a test charge $Q$ at the center is:
+\[
+\vec{F} = Q \vec{E}.
+\]
+
+\item By symmetry, only the axial ($z$) component survives. Each charge element contributes a field whose radial components cancel.
+
+\[
+E_z = \frac{1}{4\pi\varepsilon_0} \frac{z (2\pi r \lambda)}{(r^2 + z^2)^{3/2}}.
+\]
+
+Thus:
+\[
+\vec{E} = \frac{1}{4\pi\varepsilon_0}\frac{2\pi r \lambda z}{(r^2+z^2)^{3/2}} \hat{z}.
+\]
+
+\item Using Gauss’s law, we first compute the enclosed charge:
+\[
+Q_{\text{enc}}(r) = \int_0^r kr' \cdot 4\pi r'^2 dr' = \pi k r^4.
+\]
+
+Then:
+\[
+E(4\pi r^2) = \frac{Q_{\text{enc}}}{\varepsilon_0}
+\Rightarrow
+E_{\text{in}} = \frac{k r^2}{4\varepsilon_0}.
+\]
+
+Outside the sphere, the field behaves like a point charge:
+\[
+Q_{\text{tot}} = \pi k R^4, \quad
+E_{\text{out}} = \frac{1}{4\pi\varepsilon_0}\frac{\pi k R^4}{r^2}.
+\]
+
+\item The potential is obtained by integrating the electric field:
+\[
+V(r) = -\int E \, dr.
+\]
+
+Outside the sphere:
+\[
+V(r) = \frac{1}{4\pi\varepsilon_0}\frac{\pi k R^4}{r}.
+\]
+
+Inside, the potential is continuous and found by integrating inward:
+\[
+V(r) = V(R) - \int_r^R E_{\text{in}} \, dr.
+\]
+
+\item Field lines radiate outward symmetrically from each corner and curve away from the center. The field is strongest near the corners and weakest at the center due to cancellation.
+
+\item By integrating concentric rings:
+
+\[
+V(z) = \frac{\sigma}{2\varepsilon_0}\left(\sqrt{R^2 + z^2} - z\right).
+\]
+
+The electric field is obtained via:
+\[
+E_z = -\frac{dV}{dz} = \frac{\sigma}{2\varepsilon_0}\left(1 - \frac{z}{\sqrt{R^2+z^2}}\right).
+\]
+
+\item Total charge:
+\[
+Q = 4\pi \int_0^R \rho_0\left(1 - \frac{r}{R}\right) r^2 dr = \frac{\pi \rho_0 R^3}{3}.
+\]
+
+Using Gauss’s law:
+\[
+E_{\text{in}} \propto \frac{Q_{\text{enc}}}{r^2}, \quad
+E_{\text{out}} = \frac{1}{4\pi\varepsilon_0}\frac{Q}{r^2}.
+\]
+
+Energy:
+\[
+U = \frac{\varepsilon_0}{2}\int E^2 d\tau.
+\]
+
+Final result:
+\[
+U = \frac{5}{7} \cdot \frac{3Q^2}{20\pi\varepsilon_0 R}.
+\]
+
+This is smaller than the uniform sphere energy, since charge is more concentrated near the center.
+
+\item Energy is the sum over pair interactions:
+\[
+U = \frac{1}{4\pi\varepsilon_0}\sum_{i<j} \frac{q_i q_j}{r_{ij}}.
+\]
+
+For the triangle:
+\[
+U = \frac{1}{4\pi\varepsilon_0}\left(\frac{q^2}{a} - \frac{2q^2}{a} - \frac{2q^2}{a}\right)
+= -\frac{3q^2}{4\pi\varepsilon_0 a}.
+\]
+
+For the centered configuration, the distances change, leading to a more negative energy, hence more stable.
+
+\item 
+
+\[
+U = \frac{\varepsilon_0}{2} \int E^2 d\tau.
+\]
+
+For a point charge:
+\[
+E = \frac{1}{4\pi\varepsilon_0}\frac{q}{r^2}.
+\]
+
+The integral diverges at $r=0$, so:
+\[
+U = \infty.
+\]
+
+This shows that a point charge has infinite self-energy.
+
+\item We model the electron as a spherical shell of radius $R$ with total charge $e$ uniformly distributed on its surface. Electric field of a charged shell by Gauss’s law:
+
+- For $r > R$ (outside):
+\[
+E(r) = \frac{1}{4\pi \varepsilon_0} \frac{e}{r^2}.
+\]
+
+- For $r < R$ (inside):
+\[
+E(r) = 0.
+\]
+
+Thus, the electric field exists only outside the shell. The energy stored in the electric field is:
+\[
+U = \frac{\varepsilon_0}{2} \int_{\text{all space}} E^2 \, d\tau.
+\]
+
+Since $E=0$ inside the shell, we only integrate over $r \ge R$. Substitute the field:
+
+\[
+E^2 = \left(\frac{1}{4\pi \varepsilon_0} \frac{e}{r^2}\right)^2
+= \frac{e^2}{16 \pi^2 \varepsilon_0^2 r^4}.
+\]
+
+The volume element in spherical coordinates:
+\[
+d\tau = 4\pi r^2 dr.
+\]
+
+Therefore, the energy integral becomes:
+
+\[
+U = \frac{\varepsilon_0}{2} \int_R^\infty E^2 \, d\tau
+= \frac{\varepsilon_0}{2} \int_R^\infty \frac{e^2}{16 \pi^2 \varepsilon_0^2 r^4} \cdot 4\pi r^2 \, dr.
+\]
+
+Simplify:
+
+\[
+U = \frac{\varepsilon_0}{2} \cdot \frac{e^2}{16 \pi^2 \varepsilon_0^2} \cdot 4\pi \int_R^\infty \frac{1}{r^2} \, dr.
+\]
+
+\[
+U = \frac{e^2}{8\pi \varepsilon_0} \int_R^\infty \frac{1}{r^2} \, dr.
+\]
+
+\[
+\int_R^\infty \frac{1}{r^2} dr = \left[-\frac{1}{r}\right]_R^\infty = \frac{1}{R}.
+\]
+
+\[
+U = \frac{e^2}{8\pi \varepsilon_0 R}.
+\]
+
+Equating this energy to the electron rest energy:
+\[
+mc^2 = \frac{e^2}{8\pi \varepsilon_0 R},
+\]
+Thus,
+\[
+R = \frac{1}{8\pi \varepsilon_0} \frac{e^2}{mc^2}.
+\]
+
+This is the standard classical estimate of the electron size, which is about $2.8 \times 10^{-15}$ meters.
+
+\item Using the pressure expression on the surface of a conductor:
+\[
+F = \frac{\varepsilon_0}{2} E^2 A.
+\]
+
+For a charged sphere:
+\[
+E = \frac{Q}{4\pi\varepsilon_0 R^2}
+\Rightarrow
+F = \frac{Q^2}{32\pi^2 \varepsilon_0 R^2}.
+\]
+
+\item The pressure between plates:
+\[
+P = \frac{\varepsilon_0}{2}E^2.
+\]
+
+Work done:
+\[
+W = P A \epsilon = \frac{\varepsilon_0}{2}E^2 A \epsilon.
+\]
+
+\item Consider two coaxial cylinders of radii $a$ (inner) and $b$ (outer), with charge per unit length $\lambda$ on the inner cylinder and $-\lambda$ on the outer. Choose a cylindrical Gaussian surface of radius $r$ and length $L$ (with $a < r < b$):
+
+\[
+\oint \vec{E}\cdot d\vec{A} = E(2\pi r L) = \frac{\lambda L}{\varepsilon_0}.
+\]
+
+Thus,
+\[
+E(r) = \frac{\lambda}{2\pi \varepsilon_0 r}.
+\]
+
+The potential difference between the cylinders is:
+
+\[
+V = V(a) - V(b) = -\int_a^b \vec{E}\cdot d\vec{r}.
+\]
+
+Since $\vec{E}$ is radial:
+
+\[
+V = -\int_a^b \frac{\lambda}{2\pi \varepsilon_0 r} \, dr = -\frac{\lambda}{2\pi \varepsilon_0} \int_a^b \frac{1}{r} dr
+= -\frac{\lambda}{2\pi \varepsilon_0} \left[\ln r\right]_a^b = -\frac{\lambda}{2\pi \varepsilon_0} \ln\left(\frac{b}{a}\right).
+\]
+
+Taking magnitude:
+
+\[
+V = \frac{\lambda}{2\pi \varepsilon_0} \ln\left(\frac{b}{a}\right).
+\]
+
+By definition:
+
+\[
+C' = \frac{\lambda}{V} = \frac{\lambda}{\frac{\lambda}{2\pi \varepsilon_0} \ln(b/a)} = \frac{2\pi \varepsilon_0}{\ln(b/a)}.
+\]
+
+\item We compute the multipole expansion of the potential at large distance $r \gg a$. Total charge:
+
+\[
+Q = \sum_i q_i = (-2q) + (-2q) + q + 3q = 0.
+\]
+
+Thus the monopole term vanishes:
+\[
+V_{\text{mono}} = \frac{1}{4\pi\varepsilon_0}\frac{Q}{r} = 0.
+\]
+ 
+Dipole moment by definition:
+
+\[
+\vec{p} = \sum_i q_i \vec{r}_i.
+\]
+
+Compute contributions:
+
+\[
+(-2q)(0,-a,0) = (0,2qa,0),
+\]
+\[
+(-2q)(0,a,0) = (0,-2qa,0),
+\]
+\[
+q(0,0,-a) = (0,0,-qa),
+\]
+\[
+3q(0,0,a) = (0,0,3qa).
+\]
+
+Sum:
+\[
+\vec{p} = (0,0,2qa).
+\]
+
+So the dipole moment is:
+\[
+\vec{p} = 2qa\,\hat{z}.
+\]
+
+For $r \gg a$, the leading contribution is the dipole term:
+
+\[
+V(\vec{r}) \approx \frac{1}{4\pi\varepsilon_0} \frac{\vec{p}\cdot \hat{r}}{r^2}.
+\]
+
+Since $\vec{p} \parallel \hat{z}$:
+
+\[
+\vec{p}\cdot \hat{r} = p \cos\theta.
+\]
+
+\[
+V(r,\theta) \approx \frac{1}{4\pi\varepsilon_0} \frac{2qa \cos\theta}{r^2}.
+\]
+
+
+\item 
+
+(a) Charges: $3q$ at $(0,0,a)$ and $-q$ at $(0,0,0)$. Monopole moment:
+
+\[
+Q = 3q + (-q) = 2q.
+\]
+Dipole moment:
+
+\[
+\vec{p} = \sum_i q_i \vec{r}_i = 3q(0,0,a) + (-q)(0,0,0) = (0,0,3qa).
+\]
+
+\[
+\vec{p} = 3qa\,\hat{z}.
+\]
+
+Potential (far field):
+
+\[
+V(r,\theta) \approx \frac{1}{4\pi\varepsilon_0}
+\left(
+\frac{Q}{r} + \frac{\vec{p}\cdot \hat{r}}{r^2}
+\right).
+\]
+
+Since $\vec{p}\parallel \hat{z}$:
+\[
+\vec{p}\cdot \hat{r} = p\cos\theta.
+\]
+
+\[
+V(r,\theta) \approx \frac{1}{4\pi\varepsilon_0}
+\left(
+\frac{2q}{r} + \frac{3qa\cos\theta}{r^2}
+\right).
+\]
+
+(b) Charges: $3q$ at $(0,0,0)$ and $-q$ at $(0,0,-a)$. Monopole moment:
+
+\[
+Q = 3q + (-q) = 2q.
+\]
+
+Dipole moment:
+
+\[
+\vec{p} = 3q(0,0,0) + (-q)(0,0,-a).
+\]
+
+\[
+(-q)(0,0,-a) = (0,0,qa),
+\]
+
+so:
+\[
+\vec{p} = (0,0,qa) = qa\,\hat{z}.
+\]
+
+Potential (far field):
+
+\[
+V(r,\theta) \approx \frac{1}{4\pi\varepsilon_0}
+\left(
+\frac{2q}{r} + \frac{qa\cos\theta}{r^2}
+\right).
+\]
+
+
+
+\item A pure dipole $\vec{p}$ is located at the origin and oriented in the $-z$ direction:
+\[
+\vec{p} = -p\,\hat{z}.
+\]
+
+A point charge $q$ is located at $(a,0,0)$. The position $(a,0,0)$ lies on the $x$-axis. In spherical coordinates:
+\[
+r = a, \quad \theta = \frac{\pi}{2}.
+\]
+
+Given:
+\[
+\vec{E}(r,\theta) = \frac{p}{4\pi\varepsilon_0 r^3}
+\left( 2\cos\theta\,\hat{r} + \sin\theta\,\hat{\theta} \right).
+\]
+
+Substitute $\theta = \frac{\pi}{2}$:
+\[
+\cos\theta = 0, \quad \sin\theta = 1.
+\]
+
+\[
+\Rightarrow \vec{E} = \frac{p}{4\pi\varepsilon_0 a^3}\,\hat{\theta}.
+\]
+
+At $\theta = \frac{\pi}{2}$, the unit vector $\hat{\theta}$ points in the $-z$ direction:
+\[
+\hat{\theta} = -\hat{z}.
+\]
+
+Since the dipole is already oriented along $-z$, the field becomes:
+\[
+\vec{E} = -\frac{p}{4\pi\varepsilon_0 a^3}\,\hat{z}.
+\]
+
+Force on the charge:
+
+\[
+\vec{F} = q \vec{E}.
+\]
+
+\[
+\Rightarrow \vec{F} = -\frac{qp}{4\pi\varepsilon_0 a^3}\,\hat{z}.
+\]
+
+
+\item Two dipoles are separated along the $x$-axis by a distance $r$:
+\[
+\vec{p}_1 = p_1 \hat{z}, \quad \vec{p}_2 = p_2 \hat{x}.
+\]
+
+We compute the torque on $\vec{p}_2$ due to the field created by $\vec{p}_1$. The field point (location of $\vec{p}_2$) lies on the $x$-axis. Therefore:
+\[
+\theta = \frac{\pi}{2}
+\]
+with respect to $\vec{p}_1$ (which points along $z$). Given:
+\[
+\vec{E}_1(r,\theta) = \frac{p_1}{4\pi\varepsilon_0 r^3}
+\left( 2\cos\theta\,\hat{r} + \sin\theta\,\hat{\theta} \right).
+\]
+
+At $\theta = \frac{\pi}{2}$:
+\[
+\cos\theta = 0, \quad \sin\theta = 1,
+\]
+
+so:
+\[
+\vec{E}_1 = \frac{p_1}{4\pi\varepsilon_0 r^3}\,\hat{\theta}.
+\]
+
+At the point on the $x$-axis (equatorial plane of the dipole), $\hat{\theta}$ points in the $-z$ direction:
+\[
+\hat{\theta} = -\hat{z}.
+\]
+
+Thus:
+\[
+\vec{E}_1 = -\frac{p_1}{4\pi\varepsilon_0 r^3}\,\hat{z}.
+\]
+
+The torque on a dipole in an external field is:
+\[
+\vec{\tau} = \vec{p}_2 \times \vec{E}_1.
+\]
+
+Substitute:
+\[
+\vec{\tau} = (p_2 \hat{x}) \times \left(-\frac{p_1}{4\pi\varepsilon_0 r^3}\hat{z}\right).
+\]
+
+\[
+\hat{x} \times \hat{z} = -\hat{y}.
+\]
+
+So:
+\[
+\vec{\tau} = -\frac{p_1 p_2}{4\pi\varepsilon_0 r^3} (\hat{x} \times \hat{z})
+= -\frac{p_1 p_2}{4\pi\varepsilon_0 r^3} (-\hat{y}).
+\]
+
+\[
+\vec{\tau} = \frac{p_1 p_2}{4\pi\varepsilon_0 r^3}\,\hat{y}.
+\]
+
+
+\end{enumerate}
+
+\end{document}

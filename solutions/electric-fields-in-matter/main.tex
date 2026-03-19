@@ -1,0 +1,184 @@
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{geometry}
+\geometry{a4paper, margin=0.8in}
+\pagenumbering{gobble}
+
+\title{Homework solutions for 02YELMA \\ Chapter: Electric Fields in Matter}
+\begin{document}
+\date{}
+\maketitle
+\vspace{-0.8in}
+
+\begin{enumerate}
+
+\item 
+
+\begin{enumerate}
+    \item The bound volume charge density is
+    \[
+    \rho_b = -\nabla \cdot \mathbf{P}.
+    \]
+    In cylindrical coordinates (radial symmetry),
+    \[
+    \nabla \cdot \mathbf{P} = \frac{1}{r}\frac{d}{dr}(r P_r).
+    \]
+    Since $P_r = \dfrac{a}{r}$,
+    \[
+    rP_r = a \quad \Rightarrow \quad \frac{d}{dr}(a) = 0.
+    \]
+    Therefore,
+    \[
+    \boxed{\rho_b = 0 \quad \text{for } 0<r\le R.}
+    \]
+
+    \item The bound surface charge density is
+    \[
+    \sigma_b = \mathbf{P} \cdot \hat{n}.
+    \]
+    At $r=R$, $\hat{n} = \hat{r}$, so
+    \[
+    \boxed{\sigma_b = \frac{a}{R}.}
+    \]
+
+    \item Total bound charge per unit length:
+    \[
+    Q_{\text{vol}} = \int \rho_b\, dV = 0.
+    \]
+    Surface contribution (per unit length):
+    \[
+    Q_{\text{surf}} = \sigma_b \cdot (2\pi R) = \frac{a}{R}(2\pi R) = 2\pi a.
+    \]
+    Hence,
+    \[
+    \boxed{\frac{Q_{\text{total}}}{\ell} = 2\pi a.}
+    \]
+
+    \item This is not contradictory: although $\rho_b=0$ everywhere in the bulk, charge can reside on the boundary. The divergence theorem allows nonzero flux (surface charge) even if the divergence vanishes locally.
+
+    \item The divergence being zero only applies in the region $0<r<R$. At the boundary, $\mathbf{P}$ terminates abruptly, producing a surface charge. Mathematically, this corresponds to a singular (delta-function-like) contribution at $r=R$.
+\end{enumerate}
+
+
+
+
+
+
+
+\item 
+
+\begin{enumerate}
+    \item
+    \[
+    \rho_b = -\frac{dP_x}{dx} = -\frac{d}{dx}(kx^2) = -2kx.
+    \]
+    \[
+    \boxed{\rho_b(x) = -2kx.}
+    \]
+
+    \item Surface charge densities:
+    \[
+    \sigma_b = \mathbf{P}\cdot \hat{n}.
+    \]
+    At $x=+L$, $\hat{n}=+\hat{x}$:
+    \[
+    \boxed{\sigma_b(+L) = kL^2.}
+    \]
+    At $x=-L$, $\hat{n}=-\hat{x}$:
+    \[
+    \boxed{\sigma_b(-L) = kL^2.}
+    \]
+
+    \item Volume contribution per unit area:
+    \[
+    Q_{\text{vol}}/A = \int_{-L}^{L} (-2kx)\,dx = 0.
+    \]
+    Surface contribution:
+    \[
+    Q_{\text{surf}}/A = kL^2 + kL^2 = 2kL^2.
+    \]
+    Hence,
+    \[
+    \boxed{Q_{\text{total}}/A = 2kL^2.}
+    \]
+
+    \item The system is \emph{not} neutral; there is net positive bound charge.
+
+    \item Since $\rho_b(x) = -2kx$, it is negative for $x>0$ and positive for $x<0$, increasing linearly in magnitude away from the center. Thus, charge density is larger in magnitude near the boundaries. Physically, this is because polarization grows with $x^2$, so its spatial variation is strongest away from the center.
+\end{enumerate}
+
+\item 
+
+\begin{enumerate}
+    \item
+    \[
+    \rho_b = -\nabla \cdot \mathbf{P}.
+    \]
+    In spherical coordinates:
+    \[
+    \nabla \cdot (kr\hat{r}) = \frac{1}{r^2}\frac{d}{dr}(r^2 kr) = \frac{1}{r^2}\frac{d}{dr}(kr^3) = 3k.
+    \]
+    Hence,
+    \[
+    \boxed{\rho_b = -3k.}
+    \]
+    Surface charge:
+    \[
+    \boxed{\sigma_b = kR.}
+    \]
+
+    \item By symmetry, $\mathbf{E} = E(r)\hat{r}$.
+
+    Using Gauss's law inside:
+    \[
+    Q_{\text{enc}} = \rho_b \frac{4}{3}\pi r^3 = (-3k)\frac{4}{3}\pi r^3 = -4\pi k r^3.
+    \]
+    \[
+    E(4\pi r^2) = \frac{Q_{\text{enc}}}{\varepsilon_0} \Rightarrow
+    \boxed{E_{\text{in}} = -\frac{k}{\varepsilon_0}r.}
+    \]
+
+    Outside:
+    \[
+    Q_{\text{tot}} = (-3k)\frac{4}{3}\pi R^3 + (kR)(4\pi R^2) = 0,
+    \]
+    so
+    \[
+    \boxed{E_{\text{out}} = 0.}
+    \]
+
+    \item Potential at the center:
+    \[
+    V(0) = \frac{1}{4\pi\varepsilon_0}\left(
+    \int \frac{\rho_b}{r'}\,dV' + \int \frac{\sigma_b}{R}\,dA'
+    \right).
+    \]
+
+    \item Volume contribution:
+    \[
+    V_{\text{vol}} = \frac{1}{4\pi\varepsilon_0}(-3k)\int_0^R \frac{4\pi r'^2}{r'}dr'
+    = \frac{-3k}{\varepsilon_0}\int_0^R r'\,dr'
+    = \frac{-3k}{\varepsilon_0}\frac{R^2}{2}.
+    \]
+
+    Surface contribution:
+    \[
+    V_{\text{surf}} = \frac{1}{4\pi\varepsilon_0}\frac{kR}{R}(4\pi R^2)
+    = \frac{k}{\varepsilon_0}R^2.
+    \]
+
+    \item Total:
+    \[
+    V(0) = -\frac{3kR^2}{2\varepsilon_0} + \frac{kR^2}{\varepsilon_0}
+    = \boxed{-\frac{kR^2}{2\varepsilon_0}.}
+    \]
+
+    \item The contributions do not cancel because the spatial weighting differs: volume charge is distributed throughout the sphere with $1/r'$ weighting, while surface charge is all at $r=R$. Even though total charge is zero, the potential need not vanish.
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
