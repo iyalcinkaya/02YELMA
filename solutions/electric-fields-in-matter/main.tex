@@ -24,22 +24,22 @@
     \]
     In cylindrical coordinates (radial symmetry),
     \[
-    \nabla \cdot \mathbf{P} = \frac{1}{r}\frac{d}{dr}(r P_r).
+    \nabla \cdot \mathbf{P} = \frac{1}{s}\frac{d}{ds}(s P_s).
     \]
-    Since $P_r = \dfrac{a}{r}$,
+    Since $P_s = \dfrac{a}{s}$,
     \[
-    rP_r = a \quad \Rightarrow \quad \frac{d}{dr}(a) = 0.
+    sP_s = a \quad \Rightarrow \quad \frac{d}{ds}(a) = 0.
     \]
     Therefore,
     \[
-    \boxed{\rho_b = 0 \quad \text{for } 0<r\le R.}
+    \boxed{\rho_b = 0 \quad \text{for } 0<s\le R.}
     \]
 
     \item The bound surface charge density is
     \[
     \sigma_b = \mathbf{P} \cdot \hat{n}.
     \]
-    At $r=R$, $\hat{n} = \hat{r}$, so
+    At $s=R$, $\hat{n} = \hat{s}$, so
     \[
     \boxed{\sigma_b = \frac{a}{R}.}
     \]
@@ -57,14 +57,8 @@
     \boxed{\frac{Q_{\text{total}}}{\ell} = 2\pi a.}
     \]
 
-    \item This is not contradictory: although $\rho_b=0$ everywhere in the bulk, charge can reside on the boundary. The divergence theorem allows nonzero flux (surface charge) even if the divergence vanishes locally.
-
-    \item The divergence being zero only applies in the region $0<r<R$. At the boundary, $\mathbf{P}$ terminates abruptly, producing a surface charge. Mathematically, this corresponds to a singular (delta-function-like) contribution at $r=R$.
+    \item According to what we calculated above, the total charge per unit length is not zero. This is not contradictory: although $\rho_b=0$ everywhere in the bulk, charge can reside on the boundaries. The divergence theorem allows nonzero flux (surface charge) even if the divergence vanishes locally. The divergence being zero only applies in the region $0<s<R$ but not at the boundaries. At one of the boundaries, $s=R$, $\mathbf{P}$ terminates abruptly, producing a surface charge. At the other boundary, $s=0$, the divergence is not well-defined due to the $1/s$ singularity, which can be interpreted as a line charge along the axis. Thus, the net surface charge arises from the discontinuity in $\mathbf{P}$ at $s=R$ is compansated by the singular behavior at $s=0$.
 \end{enumerate}
-
-
-
-
 
 
 
@@ -105,7 +99,7 @@
     \boxed{Q_{\text{total}}/A = 2kL^2.}
     \]
 
-    \item The system is \emph{not} neutral; there is net positive bound charge.
+    \item The system is \emph{not} neutral; there is net positive bound charge. A polarization field with nonzero total bound charge cannot be created by internal dipole rearrangement alone in an initially neutral, isolated slab. To realize this configuration, you need either free charges supplied or removed at the boundaries (e.g. electrodes), oror a process that effectively transports charge across the surface. The $\mathbf{P}$ still describes only dipoles locally (dipole moment per unit area). However, this particular form of $\mathbf{P}$ implicitly assumes that free charge has been supplied or removed to sustain it.
 
     \item Since $\rho_b(x) = -2kx$, it is negative for $x>0$ and positive for $x<0$, increasing linearly in magnitude away from the center. Thus, charge density is larger in magnitude near the boundaries. Physically, this is because polarization grows with $x^2$, so its spatial variation is strongest away from the center.
 \end{enumerate}
