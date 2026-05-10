@@ -12,16 +12,16 @@ If you wish to download all materials at once, you can click the green `<> Code`
 
 ## Course Materials
 
-| Chapter                             |                       Lecture Notes                       |                            Homework                            | Solutions |
-| :------------------------------------ | :---------------------------------------------------------: | :--------------------------------------------------------------: | :---------: |
-| **1. Mathematical tools**           |      [📝 View Notes](./notes/mathematical-tools.pdf)      |      [📄 View HW](./homework/mathematical-tools/main.pdf)      |     [📝 View Solutions](./solutions/mathematical-tools/main.pdf)    |
-| **2. Electrostatics**               |        [📝 View Notes](./notes/electrostatics.pdf)        |        [📄 View HW](./homework/electrostatics/main.pdf)        |     [📝 View Solutions](./solutions/electrostatics/main.pdf)     |
-| **3. Electric Fields in Matter**    |  [📝 View Notes](./notes/electric-fields-in-matter.pdf)  |  [📄 View HW](./homework/electric-fields-in-matter/main.pdf)  |     [📝 View Solutions](./solutions/electric-fields-in-matter/main.pdf)     |
-| **4. Magnetostatics**               |        [📝 View Notes](./notes/magnetostatics.pdf)        |        [📄 View HW](./homework/magnetostatics/main.pdf)        |     -     |
-| **5. Magnetic Fields in Matter**    |  [📝 View Notes](./notes/magnetic-fields-in-matter.pdf)  |                               -                               |     -     |
-| **6. Electrodynamics**              |       [📝 View Notes](./notes/electrodynamics.pdf)       |       [📄 View HW](./homework/electrodynamics/main.pdf)       |     -     |
-| **7. Electromagnetic Waves**        |    [📝 View Notes](./notes/electromagnetic-waves.pdf)    |    [📄 View HW](./homework/electromagnetic-waves/main.pdf)    |     -     |
-| **8. Special Theory of Relativity** | [📝 View Notes](./notes/special-theory-of-relativity.pdf) | [📄 View HW](./homework/special-theory-of-relativity/main.pdf) |     -     |
+| Chapter                             |                       Lecture Notes                       |                            Homework                            |                              Solutions                              |
+| :------------------------------------ | :---------------------------------------------------------: | :--------------------------------------------------------------: | :-------------------------------------------------------------------: |
+| **1. Mathematical tools**           |      [📝 View Notes](./notes/mathematical-tools.pdf)      |      [📄 View HW](./homework/mathematical-tools/main.pdf)      |    [📝 View Solutions](./solutions/mathematical-tools/main.pdf)    |
+| **2. Electrostatics**               |        [📝 View Notes](./notes/electrostatics.pdf)        |        [📄 View HW](./homework/electrostatics/main.pdf)        |      [📝 View Solutions](./solutions/electrostatics/main.pdf)      |
+| **3. Electric Fields in Matter**    |  [📝 View Notes](./notes/electric-fields-in-matter.pdf)  |  [📄 View HW](./homework/electric-fields-in-matter/main.pdf)  | [📝 View Solutions](./solutions/electric-fields-in-matter/main.pdf) |
+| **4. Magnetostatics**               |        [📝 View Notes](./notes/magnetostatics.pdf)        |        [📄 View HW](./homework/magnetostatics/main.pdf)        |  [📝 View Solutions](./solutions/magnetostatics/main.pdf)                                |
+| **5. Magnetic Fields in Matter**    |  [📝 View Notes](./notes/magnetic-fields-in-matter.pdf)  |                               -                               |                                  -                                  |
+| **6. Electrodynamics**              |       [📝 View Notes](./notes/electrodynamics.pdf)       |       [📄 View HW](./homework/electrodynamics/main.pdf)       |   [📝 View Solutions](./solutions/electrodynamics/main.pdf)                              |
+| **7. Electromagnetic Waves**        |    [📝 View Notes](./notes/electromagnetic-waves.pdf)    |    [📄 View HW](./homework/electromagnetic-waves/main.pdf)    | [📝 View Solutions](./solutions/electromagnetic-waves/main.pdf)                       |
+| **8. Special Theory of Relativity** | [📝 View Notes](./notes/special-theory-of-relativity.pdf) | [📄 View HW](./homework/special-theory-of-relativity/main.pdf) |                                  -                                  |
 
 ## Recordings
 

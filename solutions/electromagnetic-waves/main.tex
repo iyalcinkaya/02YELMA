@@ -1,0 +1,372 @@
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{geometry}
+\geometry{a4paper, margin=0.8in}
+\pagenumbering{gobble}
+
+\newcommand{\tvec}[1]{\mathbf{#1}}
+\newcommand{\tsc}[1]{\mathrm{#1}}
+
+\title{Homework solutions for 02YELMA \\ Chapter: Electromagnetic waves}
+\begin{document}
+\date{}
+\maketitle
+\vspace{-0.8in}
+
+\begin{enumerate}
+
+\item The plane wave propagating in the $z$-direction is
+\[
+\tvec{E}(z,t) = \tvec{E}_0\, e^{i(kz - \omega t)}, \qquad
+\tvec{E}_0 = \left[(\tsc{E}_0)_x\,\hat{x} + (\tsc{E}_0)_y\,\hat{y} + (\tsc{E}_0)_z\,\hat{z}\right].
+\]
+
+Since $\tvec{E}_0$ is a constant vector and the spatial dependence is only through $z$, we compute
+\[
+\vec{\nabla}\cdot\tvec{E}
+= \frac{\partial \tsc{E}_x}{\partial x}
++ \frac{\partial \tsc{E}_y}{\partial y}
++ \frac{\partial \tsc{E}_z}{\partial z}.
+\]
+
+The first two terms vanish because $\tsc{E}_x$ and $\tsc{E}_y$ do not depend on $x$ or $y$, respectively. The third term gives
+\[
+\frac{\partial \tsc{E}_z}{\partial z}
+= (\tsc{E}_0)_z\,(ik)\,e^{i(kz-\omega t)}.
+\]
+
+Applying Gauss's law in vacuum, $\vec{\nabla}\cdot\vec{E}=0$:
+\[
+(\tsc{E}_0)_z\,(ik)\,e^{i(kz-\omega t)} = 0.
+\]
+
+Since $k \neq 0$ and $e^{i(kz-\omega t)} \neq 0$ for all $z,t$, we conclude
+\[
+\boxed{(E_0)_z = 0.}
+\]
+
+\textbf{The electric field has no component along the direction of propagation; it is purely transverse.}
+
+Yes, an identical argument applies to the magnetic field. From $\vec{\nabla}\cdot\vec{B}=0$ and $\tvec{B}=\tvec{B}_0\,e^{i(kz-\omega t)}$, the same steps yield $(B_0)_z=0$. Electromagnetic waves in vacuum are \textbf{transverse} in both $\vec{E}$ and $\vec{B}$.
+
+
+
+\item Since all fields depend only on $z$ and $t$, and $(E_0)_z = 0$:
+\[
+\vec{\nabla}\times\tvec{E}
+= -\frac{\partial \tsc{E}_y}{\partial z}\,\hat{x}
++ \frac{\partial \tsc{E}_x}{\partial z}\,\hat{y}
+= \left[-ik\,(\tsc{E}_0)_y\,\hat{x}
++ ik\,(\tsc{E}_0)_x\,\hat{y}\right]e^{i(kz-\omega t)}.
+\]
+
+\textbf{Time derivative of the magnetic field.}
+\[
+-\frac{\partial \tvec{B}}{\partial t}
+= i\omega\,\tvec{B}_0\,e^{i(kz-\omega t)}.
+\]
+
+Setting Faraday's law $\vec{\nabla}\times\tvec{E} = -\partial\tvec{B}/\partial t$ and comparing components:
+\[
+\hat{x}:\quad -ik\,(\tsc{E}_0)_y = i\omega\,(\tsc{B}_0)_x
+\;\;\Longrightarrow\;\;
+\boxed{(\tsc{B}_0)_x\,\frac{\omega}{k} = -(\tsc{E}_0)_y}
+\]
+\[
+\hat{y}:\quad ik\,(\tsc{E}_0)_x = i\omega\,(\tsc{B}_0)_y
+\;\;\Longrightarrow\;\;
+\boxed{(\tsc{B}_0)_y\,\frac{\omega}{k} = (\tsc{E}_0)_x}
+\]
+
+\textbf{Compact vector form.} Compute the cross product $\hat{z}\times\tvec{E}_0$ using $(E_0)_z=0$:
+\[
+\hat{z}\times\tvec{E}_0
+= (\tsc{E}_0)_x\,(\hat{z}\times\hat{x})
++ (\tsc{E}_0)_y\,(\hat{z}\times\hat{y})
+= (\tsc{E}_0)_x\,\hat{y} - (\tsc{E}_0)_y\,\hat{x}.
+\]
+
+Multiplying by $k/\omega$:
+\[
+\frac{k}{\omega}\left(\hat{z}\times\tvec{E}_0\right)
+= -\frac{k}{\omega}(\tsc{E}_0)_y\,\hat{x}
++ \frac{k}{\omega}(\tsc{E}_0)_x\,\hat{y}.
+\]
+
+This reproduces exactly the two component relations above, and the $z$-component is automatically zero. Combined with $(E_0)_z=(B_0)_z=0$, all four conditions are captured by the single equation:
+\[
+\boxed{\tvec{B}_0 = \frac{k}{\omega}\left(\hat{z}\times\tvec{E}_0\right).}
+\]
+
+\textbf{Physical interpretation.} In vacuum:
+\begin{itemize}
+    \item $\vec{E}$ and $\vec{B}$ are both \textbf{transverse} (perpendicular to the propagation direction $\hat{z}$).
+    \item $\vec{E}$ and $\vec{B}$ are \textbf{mutually perpendicular} (the cross product $\hat{z}\times\vec{E}$ rotates $\vec{E}$ by $90^\circ$ in the transverse plane).
+    \item Their amplitudes are related by $B_0 = E_0/c$, since $\omega/k = c$ in vacuum.
+    \item They oscillate \textbf{in phase}.
+\end{itemize}
+
+
+\item Given: $\vec{E}(z,t)=E_0\cos(kz-\omega t)\,\hat{x}$.
+
+(a) Magnetic field
+
+Using the result $\vec{B} = \frac{k}{\omega}(\hat{z}\times\vec{E}) = \frac{1}{c}(\hat{z}\times\vec{E})$:
+\[
+\vec{B}(z,t)
+= \frac{E_0}{c}\cos(kz-\omega t)\,(\hat{z}\times\hat{x})
+= \boxed{\frac{E_0}{c}\cos(kz-\omega t)\,\hat{y}.}
+\]
+
+(b) Instantaneous Poynting vector
+
+\[
+\vec{S} = \frac{1}{\mu_0}\vec{E}\times\vec{B}
+= \frac{1}{\mu_0}\left[E_0\cos(kz-\omega t)\,\hat{x}\right]
+\times\left[\frac{E_0}{c}\cos(kz-\omega t)\,\hat{y}\right]
+\]
+\[
+\boxed{\vec{S} = \frac{E_0^2}{\mu_0 c}\cos^2(kz-\omega t)\,\hat{z}.}
+\]
+
+Since $\cos^2 \geq 0$, $\mu_0 > 0$, and $c > 0$, we have $\vec{S}\parallel +\hat{z}$, confirming that \textbf{energy flows in the direction of propagation}.
+
+(c) Time-averaged Poynting vector
+
+Since $\langle\cos^2(kz-\omega t)\rangle = \tfrac{1}{2}$:
+\[
+\boxed{\langle\vec{S}\rangle = \frac{E_0^2}{2\mu_0 c}\,\hat{z}.}
+\]
+
+(d) Electromagnetic energy density
+
+\[
+u = \frac{1}{2}\varepsilon_0 E^2 + \frac{1}{2\mu_0}B^2
+= \frac{1}{2}\varepsilon_0 E_0^2\cos^2(kz-\omega t)
++ \frac{1}{2\mu_0}\frac{E_0^2}{c^2}\cos^2(kz-\omega t).
+\]
+
+Using $c^2 = 1/(\mu_0\varepsilon_0)$, so $1/(\mu_0 c^2)=\varepsilon_0$:
+\[
+u = \underbrace{\frac{1}{2}\varepsilon_0 E_0^2\cos^2(kz-\omega t)}_{u_E}
++ \underbrace{\frac{1}{2}\varepsilon_0 E_0^2\cos^2(kz-\omega t)}_{u_B}
+\]
+\[
+\boxed{u = \varepsilon_0 E_0^2\cos^2(kz-\omega t).}
+\]
+
+We see $u_E = u_B$ term by term: \textbf{the electric and magnetic fields contribute equally to the total energy density.} The time average is $\langle u\rangle = \tfrac{1}{2}\varepsilon_0 E_0^2$.
+
+\item A parallel-plate capacitor with circular plates of radius $R$, separation $d\ll R$, is charged by a steady current $I$. Between the plates: $\vec{E}(t)=E(t)\,\hat{z}$, uniform.
+
+(a) Magnetic field between the plates
+
+There is no free current between the plates. Maxwell--Amp\`ere's law gives
+\[
+\oint\vec{B}\cdot d\vec{l}
+= \mu_0\varepsilon_0\frac{\partial}{\partial t}\int\vec{E}\cdot d\vec{A}.
+\]
+
+By symmetry, $\vec{B}=B(r)\,\hat{\phi}$. For a circular Amp\`erian loop of radius $r<R$:
+\[
+B(r)\,(2\pi r) = \mu_0\varepsilon_0\,\dot{E}\,(\pi r^2).
+\]
+
+Since the total displacement current through the full cross-section equals the conduction current, $\varepsilon_0\,\dot{E}\,\pi R^2 = I$, so $\varepsilon_0\,\dot{E} = I/(\pi R^2)$. Substituting:
+\[
+\boxed{\vec{B}(r) = \frac{\mu_0 I\, r}{2\pi R^2}\,\hat{\phi}, \qquad r < R.}
+\]
+
+(b) Poynting vector
+
+\[
+\vec{S} = \frac{1}{\mu_0}\vec{E}\times\vec{B}
+= \frac{1}{\mu_0}\,E(t)\,\hat{z}\times\frac{\mu_0 I\,r}{2\pi R^2}\,\hat{\phi}
+= \frac{E(t)\,I\,r}{2\pi R^2}\,(\hat{z}\times\hat{\phi}).
+\]
+
+Using the cylindrical coordinate identity $\hat{z}\times\hat{\phi}=-\hat{r}$:
+\[
+\boxed{\vec{S} = -\frac{E(t)\,I\,r}{2\pi R^2}\,\hat{r}.}
+\]
+
+The Poynting vector points \textbf{radially inward} (in the $-\hat{r}$ direction).
+
+(c) Energy flows in from the sides
+
+The Poynting vector has \textbf{no} $\hat{z}$-component anywhere between the plates---it is purely radial. Therefore, no energy enters through the top or bottom surfaces (the plates). All electromagnetic energy enters the capacitor volume through the \textbf{cylindrical side surface} at $r=R$.
+
+(d) Total rate of energy flow
+
+Integrate $\vec{S}$ over the cylindrical side surface at $r=R$ (outward normal $\hat{n}=+\hat{r}$, area element $dA = R\,d\phi\,dz$):
+\[
+P_{\text{in}}
+= -\oint_{\text{side}}\vec{S}\cdot\hat{r}\,dA
+= -\int_0^d\int_0^{2\pi}\left(-\frac{E(t)\,I}{2\pi}\right)d\phi\,dz
+\]
+\[
+\boxed{P_{\text{in}} = E(t)\,I\,d.}
+\]
+
+(e) Agreement with stored energy
+
+The electrostatic energy stored between the plates is
+\[
+U = \frac{1}{2}\varepsilon_0 E^2\,\pi R^2 d.
+\]
+
+Its rate of change:
+\[
+\frac{dU}{dt}
+= \varepsilon_0\,\pi R^2\,d\;E\,\dot{E}
+= \varepsilon_0\,\pi R^2\,d\;E\;\frac{I}{\varepsilon_0\pi R^2}
+= E\,I\,d.
+\]
+\[
+\boxed{\frac{dU}{dt} = E(t)\,I\,d = P_{\text{in}}.} \quad \checkmark
+\]
+
+The rate at which field energy increases inside the capacitor exactly equals the electromagnetic energy flux entering through the sides.
+
+(f) Conceptual significance
+
+This example illustrates three key ideas:
+\begin{enumerate}
+    \item \textbf{Displacement current is real:} Even though no charges flow between the plates, the time-varying electric field ($\varepsilon_0\,\partial\vec{E}/\partial t$) acts as a source of $\vec{B}$, exactly as Maxwell postulated. Without it, Amp\`ere's law would be inconsistent.
+    \item \textbf{The Poynting vector tracks energy flow:} Energy does not travel down the wires and jump across the gap. Instead, $\vec{S}$ shows that energy is stored in the electromagnetic field and flows laterally into the capacitor volume from the surrounding space.
+    \item \textbf{Energy conservation via Poynting's theorem:} The equality $dU/dt = P_{\text{in}}$ is a direct verification of Poynting's theorem, $\partial u/\partial t = -\vec{\nabla}\cdot\vec{S}$, confirming the self-consistency of Maxwell's equations and the physical reality of field energy transport.
+\end{enumerate}
+
+\item Given:
+\[
+\vec{E}(z,t)
+= \hat{x}\,E_0\cos(kz-\omega t)
++ \hat{y}\,E_0\cos(kz-\omega t+\phi).
+\]
+
+(a) Trajectory in the $xy$-plane
+
+At a fixed position $z=z_0$, define $\theta \equiv kz_0-\omega t$. Then
+\[
+E_x = E_0\cos\theta, \qquad E_y = E_0\cos(\theta+\phi).
+\]
+
+Expanding: $E_y = E_0[\cos\theta\cos\phi - \sin\theta\sin\phi]$, so
+\[
+E_y - E_x\cos\phi = -E_0\sin\theta\sin\phi.
+\]
+
+From $E_x = E_0\cos\theta$ we get $E_0^2\sin^2\theta = E_0^2 - E_x^2$. Squaring both sides of the equation above:
+\[
+(E_y - E_x\cos\phi)^2 = (E_0^2 - E_x^2)\sin^2\phi.
+\]
+
+Expanding and rearranging:
+\[
+\boxed{\frac{E_x^2}{E_0^2} + \frac{E_y^2}{E_0^2}
+- \frac{2E_x E_y}{E_0^2}\cos\phi = \sin^2\phi.}
+\]
+
+This is the equation of an \textbf{ellipse} in the $E_x$--$E_y$ plane (the polarization ellipse), which degenerates into a line or circle for special values of $\phi$.
+
+(b) Special polarization states
+
+\textbf{Linear polarization} occurs when the ellipse degenerates into a straight line, i.e.\ $\sin^2\phi=0$:
+\[
+\boxed{\phi = 0 \quad\text{or}\quad \phi = \pi
+\quad (\text{more generally } \phi=n\pi,\; n\in\mathbb{Z}).}
+\]
+\begin{itemize}
+    \item $\phi=0$: $(E_x - E_y)^2=0 \;\Rightarrow\; E_y=E_x$, a line at $45^\circ$.
+    \item $\phi=\pi$: $(E_x+E_y)^2=0 \;\Rightarrow\; E_y=-E_x$, a line at $-45^\circ$.
+\end{itemize}
+
+\textbf{Circular polarization} occurs when the ellipse becomes a circle, requiring $\cos\phi=0$ (so the cross term vanishes) with equal amplitudes in both components:
+\[
+\boxed{\phi = +\frac{\pi}{2} \quad\text{or}\quad \phi = -\frac{\pi}{2}.}
+\]
+
+The trajectory becomes $E_x^2+E_y^2=E_0^2$, a circle of radius $E_0$.
+
+(c) Sense of rotation
+
+Set $z_0=0$ so $\theta = -\omega t$.
+
+\textbf{Case $\phi = +\pi/2$:}
+\[
+E_x = E_0\cos(\omega t), \qquad E_y = -E_0\sin(\omega t).
+\]
+
+\begin{center}
+\begin{tabular}{ccc}
+\hline
+$\omega t$ & $E_x$ & $E_y$ \\
+\hline
+$0$ & $E_0$ & $0$ \\
+$\pi/2$ & $0$ & $-E_0$ \\
+\hline
+\end{tabular}
+\end{center}
+
+The tip rotates $\hat{x}\to -\hat{y}$: \textbf{clockwise} when viewed looking in the $+z$-direction (right-circular polarization).
+
+\textbf{Case $\phi = -\pi/2$:}
+\[
+E_x = E_0\cos(\omega t), \qquad E_y = E_0\sin(\omega t).
+\]
+
+The tip rotates $\hat{x}\to +\hat{y}$: \textbf{counterclockwise} when viewed looking in the $+z$-direction (left-circular polarization).
+
+(d) Time-averaged Poynting vector
+
+The magnetic field follows from $\vec{B}=\frac{1}{c}(\hat{z}\times\vec{E})$:
+\[
+\vec{B} = \frac{E_0}{c}\left[-\cos(kz-\omega t+\phi)\,\hat{x}
++ \cos(kz-\omega t)\,\hat{y}\right].
+\]
+
+The Poynting vector is
+\[
+\vec{S} = \frac{1}{\mu_0}\vec{E}\times\vec{B}.
+\]
+
+Using the vector identity (with $E_z=0$):
+\[
+\vec{E}\times(\hat{z}\times\vec{E})
+= (\vec{E}\cdot\vec{E})\,\hat{z}
+- (\vec{E}\cdot\hat{z})\,\vec{E}
+= |\vec{E}|^2\,\hat{z},
+\]
+we obtain
+\[
+\vec{S} = \frac{|\vec{E}|^2}{\mu_0 c}\,\hat{z}.
+\]
+
+Now compute the time average of $|\vec{E}|^2$:
+\[
+|\vec{E}|^2 = E_0^2\cos^2(kz-\omega t) + E_0^2\cos^2(kz-\omega t+\phi).
+\]
+
+Since $\langle\cos^2(\cdot)\rangle = 1/2$ regardless of any constant phase offset:
+\[
+\langle|\vec{E}|^2\rangle = \frac{E_0^2}{2}+\frac{E_0^2}{2} = E_0^2.
+\]
+
+Therefore,
+\[
+\boxed{\langle\vec{S}\rangle = \frac{E_0^2}{\mu_0 c}\,\hat{z}.}
+\]
+
+This points along $+\hat{z}$, the direction of propagation, and \textbf{its magnitude is independent of $\phi$}.
+
+\textbf{Why is $\langle\vec{S}\rangle$ independent of $\phi$?} The phase $\phi$ redistributes energy between the two transverse components over the cycle---it changes the \emph{shape} of the polarization ellipse---but it does not change the \emph{amplitude} of either component. Each component independently contributes $E_0^2/2$ to the time-averaged intensity. Since the total time-averaged power depends only on $\langle E_x^2\rangle + \langle E_y^2\rangle$, and cross terms average to zero, the result is the same for linear, circular, or any elliptical polarization sharing the same component amplitudes.
+
+
+
+\end{enumerate}
+
+
+\end{document}

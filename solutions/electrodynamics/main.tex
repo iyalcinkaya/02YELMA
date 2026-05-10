@@ -1,0 +1,462 @@
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{geometry}
+\geometry{a4paper, margin=0.8in}
+\pagenumbering{gobble}
+
+\title{Homework solutions for 02YELMA \\ Chapter: Electrodynamics}
+\begin{document}
+\date{}
+\maketitle
+\vspace{-0.8in}
+
+\begin{enumerate}
+
+\item The magnetic field produced by a very long straight wire carrying current \(I\) is
+
+\[
+B(r)=\frac{\mu_0 I}{2\pi r}
+\]
+
+where \(r\) is the perpendicular distance from the wire.
+
+Assume the square loop has side length \(a\), and its nearer side is at distance \(s\) from the wire.
+
+\begin{itemize}
+\item[(a)] Magnetic flux through the loop
+
+Take a thin strip of width \(dr\) and height \(a\):
+
+\[
+dA=a\,dr
+\]
+
+so
+
+\[
+d\Phi = B(r)\,dA
+\]
+
+thus
+
+\[
+d\Phi
+=
+\frac{\mu_0 I}{2\pi r}\,a\,dr
+\]
+
+Integrate from \(r=s\) to \(r=s+a\):
+
+\[
+\Phi
+=
+\int_s^{s+a}
+\frac{\mu_0 I a}{2\pi r}\,dr
+\]
+
+Therefore,
+
+\[
+\boxed{
+\Phi
+=
+\frac{\mu_0 I a}{2\pi}
+\ln\!\left(\frac{s+a}{s}\right)
+}
+\]
+
+\item[(b)] Induced emf when the loop is pulled away
+
+As the loop moves away, \(s=s(t)\) changes with speed
+
+\[
+\frac{ds}{dt}=v
+\]
+
+Using Faraday’s law,
+
+\[
+\mathcal{E}
+=
+-\frac{d\Phi}{dt}
+\]
+
+Differentiate:
+
+\[
+\mathcal{E}
+=
+-
+\frac{\mu_0 I a}{2\pi}
+\frac{d}{dt}
+\ln\!\left(\frac{s+a}{s}\right)
+\]
+
+which gives
+
+\[
+\boxed{
+\mathcal{E}
+=
+\frac{\mu_0 I a v}{2\pi}
+\left(
+\frac{1}{s}
+-
+\frac{1}{s+a}
+\right)
+}
+\]
+
+As the loop moves away, the magnetic flux decreases. By Lenz’s law, the induced current tries to maintain the original magnetic field, so the induced current is
+
+\[
+\boxed{\text{counterclockwise.}}
+\]
+
+\end{itemize}
+
+\item Inside the solenoid,
+
+\[
+\vec B(t)=B_0\cos(\omega t)\,\hat z
+\]
+
+The loop radius is
+
+\[
+r=\frac{a}{2}
+\]
+
+so its area is
+
+\[
+A=\pi\left(\frac a2\right)^2
+=
+\frac{\pi a^2}{4}
+\]
+
+The magnetic flux is
+
+\[
+\Phi(t)=BA
+=
+B_0\cos(\omega t)\,
+\frac{\pi a^2}{4}
+\]
+
+The induced emf is
+
+\[
+\mathcal E
+=
+-\frac{d\Phi}{dt}
+=
+\frac{\pi a^2 B_0\omega}{4}
+\sin(\omega t)
+\]
+
+Using Ohm’s law,
+
+\[
+I=\frac{\mathcal E}{R}
+\]
+
+we obtain
+
+\[
+\boxed{
+I(t)
+=
+\frac{\pi a^2 B_0\omega}{4R}
+\sin(\omega t)
+}
+\]
+
+\item The magnetic field inside a long solenoid is
+
+\[
+B=\mu_0 n I
+\]
+
+The flux through one turn is
+
+\[
+\Phi_1
+=
+BA
+=
+\mu_0 n I \,\pi R^2
+\]
+
+The total number of turns in length \(l\) is
+
+\[
+N=nl
+\]
+
+Thus the total flux linkage is
+
+\[
+N\Phi_1
+=
+nl\,
+\mu_0 n I \pi R^2
+\]
+
+Using the definition of inductance,
+
+\[
+L=\frac{N\Phi_1}{I}
+\]
+
+we get
+
+\[
+L
+=
+\mu_0 n^2 \pi R^2 l
+\]
+
+Hence, the self-inductance per unit length is
+
+\[
+\boxed{
+\frac{L}{l}
+=
+\mu_0 n^2 \pi R^2
+}
+\]
+
+\item Electric field of a time-dependent solenoid
+
+The magnetic field inside the solenoid is
+
+\[
+B(t)=\mu_0 n I(t)
+\]
+
+Using Faraday’s law,
+
+\[
+\oint \vec E\cdot d\vec l
+=
+-
+\frac{d\Phi_B}{dt}
+\]
+
+By symmetry,
+
+\[
+\vec E = E_\phi(s)\,\hat\phi
+\]
+
+and therefore
+
+\[
+\oint \vec E\cdot d\vec l
+=
+E(2\pi s)
+\]
+
+\begin{itemize}
+\item[(a)] Inside the solenoid (\(s<a\))
+
+The magnetic flux is
+
+\[
+\Phi_B
+=
+B\pi s^2
+\]
+
+so
+
+\[
+E(2\pi s)
+=
+-
+\pi s^2
+\frac{dB}{dt}
+\]
+
+which gives
+
+\[
+\boxed{
+E(s)
+=
+-\frac{s}{2}
+\frac{dB}{dt}
+=
+-\frac{\mu_0 n s}{2}
+\frac{dI}{dt}
+}
+\]
+
+The direction is
+
+\[
+\boxed{\hat\phi}
+\]
+
+\item[(b)] Outside the solenoid (\(s>a\))
+
+Only the field inside contributes:
+
+\[
+\Phi_B
+=
+B\pi a^2
+\]
+
+thus
+
+\[
+E(2\pi s)
+=
+-
+\pi a^2
+\frac{dB}{dt}
+\]
+
+so
+
+\[
+\boxed{
+E(s)
+=
+-
+\frac{a^2}{2s}
+\frac{dB}{dt}
+=
+-
+\frac{\mu_0 n a^2}{2s}
+\frac{dI}{dt}
+}
+\]
+
+Again, the direction is azimuthal (\(\hat\phi\)).
+\end{itemize}
+
+\item The applied voltage is
+
+\[
+V(t)=V_0\cos(\omega t)
+\]
+
+The electric field between the plates is
+
+\[
+E(t)=\frac{V(t)}{d}
+=
+\frac{V_0}{d}\cos(\omega t)
+\]
+
+\begin{itemize}
+\item[(a)] Displacement current density
+
+Using
+
+\[
+\vec J_d
+=
+\epsilon_0
+\frac{\partial \vec E}{\partial t}
+\]
+
+we obtain
+
+\[
+\boxed{
+\vec J_d(t)
+=
+-
+\epsilon_0
+\frac{V_0\omega}{d}
+\sin(\omega t)\,\hat z
+}
+\]
+
+\item[(b)] Magnetic field
+
+Using Ampère-Maxwell law,
+
+\[
+\oint \vec B\cdot d\vec l
+=
+\mu_0\epsilon_0
+\frac{d\Phi_E}{dt}
+\]
+
+and cylindrical symmetry,
+
+\[
+B(2\pi r)
+=
+\mu_0\epsilon_0
+\frac{d}{dt}
+(E \cdot \text{area})
+\]
+
+For \(r<R\), the enclosed area is
+
+\[
+\pi r^2
+\]
+
+thus
+
+\[
+B(2\pi r)
+=
+\mu_0\epsilon_0
+\pi r^2
+\frac{dE}{dt}
+\]
+
+which gives
+
+\[
+\boxed{
+B(r,t)
+=
+-
+\frac{\mu_0\epsilon_0 V_0\omega}{2d}
+\,r\,
+\sin(\omega t)
+}
+\]
+
+For \(r>R\), the full plate area contributes:
+
+\[
+\pi R^2
+\]
+
+so
+
+\[
+\boxed{
+B(r,t)
+=
+-
+\frac{\mu_0\epsilon_0 V_0\omega}{2d}
+\frac{R^2}{r}
+\sin(\omega t)
+}
+\]
+
+The magnetic field direction is
+
+\[
+\boxed{\hat\phi}
+\]
+\end{itemize}
+
+\end{enumerate}
+
+
+\end{document}

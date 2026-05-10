@@ -1,0 +1,512 @@
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{geometry}
+\geometry{a4paper, margin=0.8in}
+\pagenumbering{gobble}
+
+\title{Homework solutions for 02YELMA \\ Chapter: Magnetostatics}
+\begin{document}
+\date{}
+\maketitle
+\vspace{-0.8in}
+
+\begin{enumerate}
+
+\item \textbf{Magnetic field at the center of a square loop}
+
+Using the magnetic field of a finite straight wire:
+
+\[
+B=\frac{\mu_0 I}{4\pi R}\left(\sin\theta_1+\sin\theta_2\right)
+\]
+
+At the center of the square:
+
+\[
+\theta_1=\theta_2=45^\circ
+\]
+
+so for one side,
+
+\[
+B_{\text{one side}}
+=
+\frac{\mu_0 I}{4\pi R}
+\left(
+\sin45^\circ+\sin45^\circ
+\right)
+\]
+
+\[
+=
+\frac{\mu_0 I}{4\pi R}
+\left(
+\frac{\sqrt2}{2}+\frac{\sqrt2}{2}
+\right)
+=
+\frac{\mu_0 I\sqrt2}{4\pi R}
+\]
+
+There are 4 identical sides, therefore
+
+\[
+B=
+4B_{\text{one side}}
+=
+\frac{\mu_0 I\sqrt2}{\pi R}
+\]
+
+Hence,
+
+\[
+\boxed{
+B=\frac{\mu_0 I\sqrt2}{\pi R}
+}
+\]
+
+The direction is perpendicular to the plane of the loop, determined by the right-hand rule.
+
+\vspace{0.5cm}
+
+\item \textbf{Long cylindrical wire with current on the outer surface}
+
+Using Ampère’s law,
+
+\[
+\oint \vec B\cdot d\vec l=\mu_0 I_{\text{enc}}
+\]
+
+Take a circular Amperian loop of radius \(r\).
+
+\textbf{Inside the wire (\(r<a\)):}
+
+Since current exists only on the surface,
+
+\[
+I_{\text{enc}}=0
+\]
+
+therefore
+
+\[
+B(2\pi r)=0
+\]
+
+so
+
+\[
+\boxed{B=0}
+\]
+
+\textbf{Outside the wire (\(r>a\)):}
+
+Now the enclosed current is the total current \(I\):
+
+\[
+B(2\pi r)=\mu_0 I
+\]
+
+thus
+
+\[
+\boxed{
+B=\frac{\mu_0 I}{2\pi r}
+}
+\]
+
+The direction is azimuthal (\(\hat{\phi}\)) by the right-hand rule.
+
+\vspace{0.5cm}
+
+\item \textbf{Circular current loop}
+
+\begin{itemize}
+
+\item[(a)] \textbf{Magnetic dipole moment}
+
+The magnetic dipole moment is
+
+\[
+\vec m=I A \hat n
+\]
+
+where
+
+\[
+A=\pi R^2
+\]
+
+Since the current is counterclockwise as viewed from the positive \(z\)-axis, the direction is \(+\hat z\).
+
+Thus,
+
+\[
+\boxed{
+\vec m=I\pi R^2\hat z
+}
+\]
+
+\item[(b)] \textbf{Approximate magnetic field far from the origin}
+
+Using the dipole field formula,
+
+\[
+\vec{B}_{dip}(r,\theta)
+=
+\frac{\mu_0 m}{4\pi r^3}
+\left[
+2\cos\theta\,\hat r
++
+\sin\theta\,\hat\theta
+\right]
+\]
+
+Substituting
+
+\[
+m=I\pi R^2
+\]
+
+gives
+
+\[
+\boxed{
+\vec B
+=
+\frac{\mu_0 I R^2}{4r^3}
+\left[
+2\cos\theta\,\hat r
++
+\sin\theta\,\hat\theta
+\right]
+}
+\qquad (r\gg R)
+\]
+
+\item[(c)] \textbf{Consistency with the exact result on the \(z\)-axis}
+
+The exact magnetic field on the axis is
+
+\[
+B_z
+=
+\frac{\mu_0 I R^2}
+{2(R^2+z^2)^{3/2}}
+\]
+
+For \(z\gg R\),
+
+\[
+R^2+z^2\approx z^2
+\]
+
+so
+
+\[
+B_z
+\approx
+\frac{\mu_0 I R^2}{2z^3}
+\]
+
+From the dipole formula on the axis,
+
+\[
+\theta=0,\quad r=z
+\]
+
+thus
+
+\[
+B=
+\frac{\mu_0 m}{4\pi z^3}(2)
+\]
+
+and using
+
+\[
+m=I\pi R^2
+\]
+
+we obtain
+
+\[
+B=
+\frac{\mu_0 I R^2}{2z^3}
+\]
+
+which is exactly the same result. Therefore,
+
+\[
+\boxed{\text{The dipole approximation is consistent with the exact field}}
+\]
+
+\end{itemize}
+
+\vspace{0.5cm}
+
+\item \textbf{Orbital magnetic dipole moment in Rutherford atom}
+
+The equivalent current is
+
+\[
+I=\frac{\text{charge}}{\text{period}}
+\]
+
+The period is
+
+\[
+T=\frac{2\pi R}{v}
+\]
+
+thus
+
+\[
+I=\frac{e}{T}
+=
+\frac{ev}{2\pi R}
+\]
+
+The magnetic dipole moment is
+
+\[
+m=IA
+=
+\frac{ev}{2\pi R}\cdot \pi R^2
+\]
+
+which gives
+
+\[
+m=\frac{evR}{2}
+\]
+
+Since the electron has negative charge, the magnetic moment points opposite to the direction of current.
+
+Counterclockwise motion of the electron means conventional current is clockwise, so the dipole moment points in the negative \(z\)-direction.
+
+Hence,
+
+\[
+\boxed{
+\vec m=
+-\frac{evR}{2}\hat z
+}
+\]
+
+\vspace{0.5cm}
+
+\item \textbf{Uniformly magnetized sphere}
+
+Given
+
+\[
+\vec M=M\hat z
+\]
+
+\begin{itemize}
+
+\item[(a)] \textbf{Bound currents}
+
+Volume bound current:
+
+\[
+\vec J_b=\nabla\times\vec M
+\]
+
+Since \(M\) is constant,
+
+\[
+\boxed{
+\vec J_b=0
+}
+\]
+
+Surface bound current:
+
+\[
+\vec K_b=\vec M\times\hat n
+\]
+
+For a sphere,
+
+\[
+\hat n=\hat r
+\]
+
+and using
+
+\[
+\hat z=\cos\theta\,\hat r-\sin\theta\,\hat\theta
+\]
+
+we get
+
+\[
+\vec K_b
+=
+M\hat z\times\hat r
+=
+M\sin\theta\,\hat\phi
+\]
+
+Therefore,
+
+\[
+\boxed{
+\vec K_b=M\sin\theta\,\hat\phi
+}
+\]
+
+\item[(b)] \textbf{Surface velocity of rotating shell}
+
+Distance from the axis is
+
+\[
+R\sin\theta
+\]
+
+so
+
+\[
+v=\omega R\sin\theta
+\]
+
+and the direction is \(\hat\phi\).
+
+Hence,
+
+\[
+\boxed{
+\vec v=\omega R\sin\theta\,\hat\phi
+}
+\]
+
+\item[(c)] \textbf{Surface current density}
+
+Using
+
+\[
+\vec K=\sigma\vec v
+\]
+
+we obtain
+
+\[
+\boxed{
+\vec K
+=
+\sigma\omega R\sin\theta\,\hat\phi
+}
+\]
+
+\item[(d)] \textbf{Comparison of \(\vec K_b\) and \(\vec K\)}
+
+We have
+
+\[
+K_b=M\sin\theta
+\]
+
+and
+
+\[
+K=\sigma\omega R\sin\theta
+\]
+
+These are identical if
+
+\[
+\boxed{
+M=\sigma\omega R
+}
+\]
+
+Thus, a uniformly magnetized sphere behaves like a rotating charged spherical shell.
+
+\item[(e)] \textbf{Magnetic dipole moment}
+
+For a uniformly magnetized sphere,
+
+\[
+\vec m
+=
+\vec M \times (\text{volume})
+\]
+
+that is,
+
+\[
+\vec m
+=
+\vec M
+\left(
+\frac{4}{3}\pi R^3
+\right)
+\]
+
+Therefore,
+
+\[
+\boxed{
+\vec m=
+\frac{4}{3}\pi R^3 M\,\hat z
+}
+\]
+
+\end{itemize}
+
+\vspace{0.5cm}
+
+\item \textbf{Electron as a rotating spherical shell}
+
+From the previous result,
+
+\[
+m=\frac{4}{3}\pi R^3 M
+\]
+and
+\[M=\sigma\omega R
+\]
+so
+\[m=\frac{4}{3}\pi R^3 \sigma\omega R
+=\frac{4}{3}\pi R^4 \sigma\omega
+\]
+Thus we can write angular velocity as
+\[\omega=\frac{3m}{4\pi R^4 \sigma}
+\]
+Again from the previous result, we know that the surface velocity of rotating shell is
+\[v=\omega R\sin\theta
+\]
+The maximum speed is at the equator where \(\sin\theta=1\), so
+\[v_{\text{max}}=\omega R
+\]
+Substituting \(\omega\) gives
+\[v_{\text{max}}=\frac{3m}{4\pi R^3 \sigma}
+\]
+Also, she surface charge density is
+\[\sigma=\frac{e}{4\pi R^2}
+\]
+so
+\[v_{\text{max}}=\frac{3m}{4\pi R^3 \cdot \frac{e}{4\pi R^2}}
+=\frac{3m}{eR}
+\]
+From the previous homework, we calculated the classical radius of electron as
+\[R=1.4 \times 10^{-15}\,\text{m}
+\]
+From experiment, the magnetic dipole moment of electron is
+\[m=9.28 \times 10^{-24}\,\text{A}\cdot\text{m}^2
+\]
+and the elementary charge is
+\[e=1.60 \times 10^{-19}\,\text{C}
+\]
+Substituting these values gives
+\[v_{\text{max}}=\frac{3 \times 9.28 \times 10^{-24}}{1.60 \times 10^{-19} \times 1.4 \times 10^{-15}}
+\approx 1.24 \times 10^{11}\,\text{m/s}
+\]
+which is more than 1000 times the speed of light. This is clearly contradict the principles of special relativity, indicating that the classical model of electron as a rotating spherical shell is not valid.
+\end{enumerate}
+
+\end{document}
