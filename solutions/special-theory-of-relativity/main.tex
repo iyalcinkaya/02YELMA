@@ -1,0 +1,360 @@
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{tikz}
+\setlength{\parindent}{0pt}
+
+\geometry{a4paper, margin=0.8in}
+\pagenumbering{gobble}
+
+\newcommand{\tvec}[1]{\mathbf{#1}}
+\newcommand{\tsc}[1]{\mathrm{#1}}
+
+\title{Homework solutions for 02YELMA \\ Chapter: Special Theory of Relativity}
+\begin{document}
+\date{}
+\maketitle
+\vspace{-0.8in}
+
+\begin{enumerate}
+
+\item
+
+Classically, one would simply add the velocities:
+\[
+u_{\text{cl}} = 50+10 = 60\ \text{km/h}.
+\]
+
+The correct relativistic velocity addition formula is
+\[
+u=\frac{u'+v}{1+\dfrac{u'v}{c^2}},
+\]
+where
+\[
+v=50\ \text{km/h},\qquad
+u'=10\ \text{km/h}.
+\]
+
+Thus
+\[
+u=
+\frac{60}{1+\dfrac{(50)(10)}{c^2}}.
+\]
+
+Since
+\[
+\frac{u'v}{c^2}\ll 1,
+\]
+we use the series expansion
+\[
+\frac{1}{1+x}\approx 1-x
+\qquad (|x|\ll1).
+\]
+
+Taking
+\[
+x=\frac{u'v}{c^2},
+\]
+we get
+\[
+u\approx (u'+v)\left(1-\frac{u'v}{c^2}\right).
+\]
+
+Therefore
+\[
+u\approx
+60\left(1-\frac{500}{c^2}\right).
+\]
+
+The classical error is
+\[
+\Delta u
+=
+u_{\text{cl}}-u
+\approx
+60\cdot\frac{500}{c^2}.
+\]
+
+Hence the relative error is
+\[
+\frac{\Delta u}{u}
+\approx
+\frac{500}{c^2}.
+\]
+
+Using
+\[
+c=3\times10^8\ \text{m/s}
+=
+1.08\times10^9\ \text{km/h},
+\]
+we obtain
+\[
+\frac{500}{c^2}
+=
+\frac{500}{(1.08\times10^9)^2}
+\approx
+4.3\times10^{-16}.
+\]
+
+Thus the percentage error is
+\[
+\boxed{
+\%\text{ error}
+\approx
+4.3\times10^{-14}\%
+}
+\]
+
+which is essentially zero, so for everyday speeds simple addition is completely sufficient.
+\vspace{1em}
+
+\item
+
+\begin{enumerate}
+
+\item[(a)] Without Special Relativity
+
+Muon lifetime:
+\[
+t_0=2.2\times10^{-6}\ \text{s}
+\]
+
+Speed:
+\[
+v=0.998c
+\]
+
+Distance traveled:
+\[
+d=vt_0=(0.998)(3.0\times10^8)(2.2\times10^{-6})
+\]
+
+\[
+d\approx 6.59\times10^2\ \text{m}
+\]
+
+\[
+d\approx 659\ \text{m}
+\]
+
+Since
+\[
+659\ \text{m} \ll 15\,000\ \text{m},
+\]
+the muons would not reach the Earth's surface.
+
+\vspace{1em}
+
+\item[(b)] With Special Relativity
+
+Time dilation:
+\[
+t=\frac{t_0}{\sqrt{1-\left(\dfrac{v}{c}\right)^2}}
+\]
+
+Since
+\[
+\frac{v}{c}=0.998,
+\]
+we have
+\[
+1-(0.998)^2=1-0.996004=0.003996
+\]
+
+Thus
+\[
+\sqrt{0.003996}\approx 0.0632
+\]
+
+Therefore
+\[
+t=\frac{2.2\times10^{-6}}{0.0632}
+\approx 3.48\times10^{-5}\ \text{s}
+\]
+
+So the dilated lifetime is
+\[
+t\approx 3.5\times10^{-5}\ \text{s}.
+\]
+
+\vspace{1em}
+
+\item[(c)] Comparison and Conclusion
+
+Using the dilated lifetime,
+\[
+d=vt=(0.998)(3.0\times10^8)(3.48\times10^{-5})
+\]
+
+\[
+d\approx 1.04\times10^4\ \text{m}
+\]
+
+\[
+d\approx 10.4\ \text{km}
+\]
+
+This is much larger than the non-relativistic result and is comparable to the atmospheric thickness but it is still smaller than 15 km:
+
+\[
+10.4\ \text{km} \lesssim 15\ \text{km}
+\]
+The reason we can still detect them at the Earth's surface is that the muon decay is a random process and some muons will survive longer than the average lifetime. Therefore many muons can still survive long enough to reach the Earth's surface. Without special relativity they would decay too quickly, so time dilation is necessary to explain the observed muons at ground level.
+
+\end{enumerate}
+
+\vspace{1em}
+\item a)\[
+\vec{E}^{\prime} = \begin{pmatrix} 0 \\ \gamma E_0 \\ 0 \end{pmatrix} \quad \vec{B}^{\prime} = \begin{pmatrix} 0 \\ 0 \\ -\frac{\gamma v}{c^2} E_0 \end{pmatrix}
+\]
+
+b) $S'$ observes and electric field in $y'$ direction with magnitude $\gamma E_0$ which is scaled by the Lorentz factor $\gamma$. Since $\gamma \ge 1$, $|\vec{E}^{\prime}| \ge |\vec{E}|$. Even though S frame observes no magnetic field, $S^{\prime}$ frame observes magnetic field in $z^{\prime}$ direction with magnitude $\frac{\gamma v}{c^2}E_0$.
+
+c)\[
+\vec{u}^{\prime} = \begin{pmatrix} u_x^{\prime} \\ u_y^{\prime} \\ u_z^{\prime} \end{pmatrix} \Rightarrow \vec{u}^{\prime} \times \vec{B}^{\prime} = \begin{pmatrix} u_y^{\prime} B_z^{\prime} \\ -u_x^{\prime} B_z^{\prime} \\ 0 \end{pmatrix}
+\]
+
+\[
+\vec{F}^{\prime} = q\vec{E}^{\prime} + q\vec{u}^{\prime} \times \vec{B}^{\prime} = \begin{pmatrix} q u_y^{\prime} B_z^{\prime} \\ q \gamma E_0 - q u_x^{\prime} B_z^{\prime} \\ 0 \end{pmatrix}
+\]
+
+d) Equations of motion:
+\begin{itemize}
+    \item \textbf{x-direction:} $m \dot{u}_x^{\prime} = q u_y^{\prime} B_z^{\prime}$
+    \item \textbf{y-direction:} $m \dot{u}_y^{\prime} = -q u_x^{\prime} B_z^{\prime} + q \gamma E_0$
+    \item \textbf{z-direction:} $m \dot{u}_z^{\prime} = 0$
+\end{itemize}
+
+where $B_z^{\prime} \equiv -\frac{\gamma v}{c^2} E_0$ and the motion is coupled in $x$ and $y$ directions. The particle experiences no force and therefore no acceleration in the $z$ direction, so there is no motion in the $z$ direction. To decouple the differential equations, we differentiate the first, and then, insert the second:
+
+\[
+\ddot{u}_x^{\prime} = \frac{q}{m} \dot{u}_y^{\prime} B_z^{\prime} = \frac{q}{m} \left[ -\frac{q}{m} u_x^{\prime} B_z^{\prime} + \frac{q}{m} \gamma E_0 \right] B_z^{\prime}
+\]
+\[
+= -\frac{q^2}{m^2} {B_z^{\prime}}^2 u_x^{\prime} + \frac{q^2}{m^2} \gamma E_0 B_z^{\prime}
+\]
+\[
+= -\omega^2 u_x^{\prime} + \frac{q^2}{m^2} \gamma E_0 B_z^{\prime}, ~~\text{where}~~ \omega \equiv \frac{q B_z^{\prime}}{m}
+\]
+
+\[
+\ddot{u}_x^{\prime} + \omega^2 u_x^{\prime} = \left( \frac{q^2}{m^2} \gamma E_0 B_z^{\prime} \right) \rightarrow \ddot{u}_x^{\prime} + \omega^2 u_x^{\prime} = C
+\]
+
+This is a 2nd order inhomogenous differential equation and it's general solution is$u_x^{\prime}(t^{\prime}) = y_c(t^{\prime}) + y_p(t^{\prime})$, where $y_c(t^{\prime})$ is the complementary solution and $y_p(t^{\prime})$ is the particular solution.
+
+\[
+y_c(t^{\prime}) = A \cos(\omega t^{\prime}) + B \sin(\omega t^{\prime})
+\]
+
+
+To find $y_p(t^{\prime})$, observe that the inhomogenous part is a constant;
+\[
+C = \frac{q^2}{m^2} \gamma E_0 B_z^{\prime}
+\]
+
+A convenient solution suggestion would be constant: $y_p(t^{\prime}) = \text{const} = y_p$\\
+
+\noindent Plug const. into $\ddot{u}_x^{\prime} + \omega^2 u_x^{\prime} = C \Rightarrow 0 + \omega^2 y_p = C \Rightarrow y_p = C/\omega^2$
+
+\[
+y_p = \frac{\frac{q^2}{m^2} \gamma E_0 B_z^{\prime}}{\omega^2} = \frac{\gamma E_0}{B_z^{\prime}}
+\]
+
+\noindent General solution:
+\[
+u_x^{\prime}(t^{\prime}) = A \cos(\omega t^{\prime}) + B \sin(\omega t^{\prime}) + \frac{\gamma E_0}{B_z^{\prime}}
+\]
+
+Consider the initial conditions to determine A and B:
+\[
+u_x^{\prime}(0) = A \cdot 1 + \frac{\gamma E_0}{B_z^{\prime}} = 0 \Rightarrow A = -\frac{\gamma E_0}{B_z^{\prime}}
+\]
+
+\[
+\dot{u}_x^{\prime}(t^{\prime}) = -A \omega \sin(\omega t^{\prime}) + B \omega \cos(\omega t^{\prime})
+\]
+\[
+\dot{u}_x^{\prime}(0) = B \omega \text{ : acceleration at } t=0 \text{ in x direction.}
+\]
+
+Since at $t^{\prime} = 0$,
+\[
+\vec{F}^{\prime} = \begin{pmatrix} 0 \\ q \gamma E_0 \\ 0 \end{pmatrix}
+\]
+no force and therefore no acc. in x direction.
+
+\[
+\dot{u}_x^{\prime}(0) = B \omega = 0 \Rightarrow B = 0
+\]
+
+\[
+u_x^{\prime}(t^{\prime}) = \frac{\gamma E_0}{B_z^{\prime}} (1 - \cos(\omega t^{\prime}))
+\]
+
+\noindent Time evolution of velocity in x-direction.
+
+\textbf{Solution for $u_y^{\prime}(t^{\prime})$}
+\[
+\dot{u}_y^{\prime} = -\frac{q}{m} u_x^{\prime} B_z^{\prime} + \frac{q}{m} \gamma E_0 = -\frac{q}{m} \left[ \frac{\gamma E_0}{B_z^{\prime}} (1 - \cos(\omega t^{\prime})) \right] B_z^{\prime} + \frac{q}{m} \gamma E_0
+\]
+\[
+= -\frac{q}{m} \gamma E_0 + \frac{q}{m} \gamma E_0 \cos(\omega t^{\prime}) + \frac{q}{m} \gamma E_0 = \frac{q}{m} \gamma E_0 \cos(\omega t^{\prime})
+\]
+
+\[
+\frac{d [u_y^{\prime}]}{dt} = \frac{q}{m} \gamma E_0 \cos(\omega t^{\prime}) \Rightarrow u_y^{\prime}(t^{\prime}) = \frac{q}{m} \gamma E_0 \frac{1}{\omega} \sin(\omega t^{\prime}) + C
+\]
+Impose initial conditions $u_y^{\prime}(0) = 0 = C \Rightarrow u_y^{\prime}(t^{\prime}) = \frac{q}{m} \gamma E_0 \frac{1}{\omega} \sin(\omega t^{\prime})$
+\[
+u_y^{\prime}(t^{\prime}) = \frac{q}{m} \gamma E_0 \frac{1}{\frac{q B_z^{\prime}}{m}} \sin(\omega t^{\prime}) = \frac{\gamma E_0}{B_z^{\prime}} \sin(\omega t^{\prime})
+\]
+
+\textbf{Summary:}
+\[
+u_x^{\prime}(t^{\prime}) = \frac{\gamma E_0}{B_z^{\prime}} [1 - \cos(\omega t^{\prime})]
+\]
+\[
+u_y^{\prime}(t^{\prime}) = \frac{\gamma E_0}{B_z^{\prime}} \sin(\omega t^{\prime})
+\]
+
+\noindent Time dependence of velocities describe a CYCLOIDAL MOTION in $x^{\prime}y^{\prime}$ plane.
+
+\noindent \textbf{CYCLOID:} It is the path traced by a point on the circumference of a circle as it rolls along a straight line without slipping. (Imagine drawing a chalk dot on a bicycle tire and then rolling the bicycle forward the dot traces a cycloid.) (See figures below for visualization.)
+
+
+\[
+x(\theta) = R \theta - R \sin \theta = R(\theta - \sin \theta)
+\]
+\[
+y(\theta) = R - R \cos \theta = R(1 - \cos \theta)
+\]
+
+\noindent where $\theta = \omega t$ and $R = \frac{\gamma E_0}{B_z^{\prime}}$ 
+\[
+\dot{x}(\theta) = R - R \cos \theta = R(1 - \cos \theta)
+\]
+\[
+\dot{y}(\theta) = R \sin \theta
+\]
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.95\textwidth]{fig1.png}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.4\textwidth]{fig2.png}
+\end{figure}
+
+
+
+\end{enumerate}
+
+\end{document}
