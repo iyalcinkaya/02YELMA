@@ -1,0 +1,68 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc} 
+\usepackage{amsmath}
+\usepackage[a4paper, margin=0.6in,top=0.3in, bottom=0.3in]{geometry} % Adjust the margin here
+\usepackage{multirow}
+\usepackage{circuitikz}
+\usepackage{nopageno}
+\usepackage{graphicx} % Add this line to include graphics
+\usepackage{tikz} % Add this line to use TikZ for drawing
+\usepackage{tikz-3dplot} % Add this line to use 3D plotting
+\setlength{\parindent}{0pt} % Set global no indent
+    
+\title{{\large Department of Physics, FNSPE, CTU in Prague} \\
+                  02YELMA - Electricity and Magnetism \\ 
+          {\Large \textbf{Final Exam}}\vspace{-1cm}}
+\date{22.6.2026 / 14:00 - 16:30}
+\author{}
+
+\begin{document}
+
+\maketitle
+\vspace{-0.8cm}
+
+\noindent
+
+\vspace{0pt}
+\textbf{Q1:} A resistor ($R$), an inductor ($L$), a capacitor ($C$) and a switch are connected in series. The capacitor is initially charged to a voltage and the switch is closed at time $t=0$.
+\begin{enumerate}
+    \item[(a)] Write down the second-order differential equation governing \underline{the current} $I(t)$ in the circuit (eliminate $Q$). --- \emph{0.3 points}
+    \item[(b)] In the underdamped case, how long does it take for the amplitude (envelope) of the oscillating current to fall to half its maximum value (\emph{0.3 points})? State the condition on $R$, $L$, and $C$ for the underdamped regime (\emph{0.1 points}).
+    \item[(c)] Now suppose the circuit is driven sinusoidally at resonance. Given that the quality factor of the circuit is defined as $Q=2\pi \frac{\text{maximum energy stored}}{\text{energy dissipated per cycle}}$, find the quality factor. --- \emph{0.3 points}
+\end{enumerate}
+
+\vspace*{0.3cm}
+\textbf{Q2:} A long coaxial cable consists of two concentric conducting cylindrical shells with radii $a$ and $b$ ($a < b$) separated by vacuum. It is driven by a time-dependent current $I(t) = I_0 \cos(\omega t)$ that flows along the inner conductor in the positive $z$-direction and returns along the outer conductor in the negative $z$-direction. Assume cylindrical symmetry and neglect end effects (quasi-magnetostatic regime). 
+\begin{enumerate}
+    \item[(a)] Determine the magnetic field $\vec{B}(r,t)$ in the region $a < r < b$ (\emph{0.4 points}) and $r > b$ (\emph{0.2 points}).
+    \item[(b)] Calculate the instantaneous magnetic energy stored per unit length and inductance per unit length of the cable. --- \emph{0.4 points}
+\end{enumerate}
+
+\vspace*{0.3cm}
+\textbf{Q3:} A long solenoid is at rest in frame $S'$ and produces a uniform 
+magnetic field inside its volume, $\vec{E}' = 0, ~\vec{B}' = B_0\,\hat{z}'$ where $B_0$ is a positive constant. Frame $S'$ moves with constant velocity 
+$\vec{v} = v\,\hat{x}$ relative to the laboratory frame $S$ 
+(i.e., perpendicular to the solenoid's axis). The axes of the coordinate systems are aligned. Using the field transformation laws, determine the electric field $\vec{E}$ (\emph{0.5 point}) and magnetic field $\vec{B}$ (\emph{0.5 points}) measured inside the solenoid in the laboratory frame $S$. \emph{Given:} $E_{\parallel} = E'_{\parallel}$, $E_{\perp} = \gamma (E'_{\perp} - \vec{v} \times \vec{B}')$, $B_{\parallel} = B'_{\parallel}$, and $B_{\perp} = \gamma (B'_{\perp} + \frac{1}{c^2} \vec{v} \times \vec{E}')$, where $\gamma = 1/\sqrt{1 - v^2/c^2}$ is the Lorentz factor and directions $\parallel$ and $\perp$ are defined with respect to the velocity $\vec{v}$.
+
+\noindent
+
+\vspace*{0.3cm}
+
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+\vspace{0pt}
+\textbf{Q4:} A conducting rod of length $L$ and resistance $R$ can slide without friction on two horizontal conducting rails. The rails are connected through a resistor of resistance $R_0$, forming a closed circuit. The mass of the rod is \(m\). Initially, the rod is at position \(x=x_0\) and is at rest $v(0)=0$. A spatially uniform magnetic field $\vec{B}(t)=B_0e^{-\alpha t} \hat{z}$ is applied, where \(B_0\) and \(\alpha\) are positive constants. 
+\end{minipage}\hfill
+\begin{minipage}[t]{0.5\textwidth}
+\vspace{0pt}
+\centering
+\includegraphics[width=\linewidth]{rail.pdf}
+\end{minipage}
+\begin{enumerate}
+    \item[(a)] Determine the magnitude and direction of the induced current $I(t)$ in the circuit. --- \emph{0.4 points}
+    \item[(b)] Obtain the differential equation governing the motion of the rod in terms of its position and its derivatives. --- \emph{0.4 points}
+     \item[(c)] Calculate the instantaneous power dissipated in both resistors at time $t=0$. --- \emph{0.2 points}
+\end{enumerate} 
+
+\end{document}
+

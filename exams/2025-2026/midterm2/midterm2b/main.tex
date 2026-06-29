@@ -1,0 +1,72 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc} 
+\usepackage{amsmath}
+\usepackage[a4paper, margin=0.6in,top=0.3in, bottom=0.3in]{geometry} % Adjust the margin here
+\usepackage{multirow}
+\usepackage{nopageno}
+\usepackage{graphicx} % Add this line to include graphics
+\usepackage{tikz} % Add this line to use TikZ for drawing
+\usepackage{tikz-3dplot} % Add this line to use 3D plotting
+\setlength{\parindent}{0pt} % Set global no indent
+    
+\title{{\large Department of Physics, FNSPE, CTU in Prague} \\
+                  02YELMA - Electricity and Magnetism \\ 
+          {\Large \textbf{Midterm 2 (B)}}\vspace{-1cm}}
+\date{15.5.2026 / 16:00 - 17:30}
+\author{}
+
+\begin{document}
+
+\maketitle
+
+\textbf{Q1:} The magnetic field of a monochromatic electromagnetic wave propagating in free space is given by $\vec{B}(x,t)=B_0\cos(kx-\omega t)\,\hat{z}$
+\begin{enumerate}
+    \item[(a)] Find the instantaneous power transmitted through a circular area of radius \(b\) in the plane perpendicular to the direction of propagation.
+    
+    \item[(b)] If the wave passes through an ideal polarizer oriented at an angle \(\pi/4\) with respect to the direction of electric field polarization, find the amplitude of the transmitted electric field.
+\end{enumerate}
+
+\vspace*{0.3cm}
+
+\textbf{Q2:} A long, straight, solid cylindrical conductor of radius \(a\) carries a steady total current \(I_0\) in the \(+\hat{x}\) direction. The volume current density varies with radial distance \(r\) from the axis as $\vec{J}(r)=J_1\left(\frac{r}{a}\right)\hat{x}$ for $0\le r\le a$ and \(\vec{J}(r)=0\) for \(r>a\). Express \(J_1\) in terms of \(I_0\) and \(a\), and then find the magnetic field \(\vec{B}(r)\) for \(r<a\) and \(r>a\).
+
+\vspace*{0.3cm}
+
+\textbf{Q3:} A metallic cylinder of radius \(b\) and height \(H\) carries a total charge \(Q\). It rotates about its symmetry axis \(\hat{z}\) with a constant angular velocity \(\omega\). Calculate the magnetic dipole moment of the cylinder. --- \textit{Assume the charge is uniformly distributed over the curved outer surface.}
+
+\vspace*{0.3cm}
+
+\textbf{Q4:} A parallel-plate capacitor with circular plates of radius \(a\) is being charged by a steady current \(I_0\). The plate separation is \(d\), with \(d\ll a\), so edge effects may be neglected. Assume vacuum between the plates. At a given instant, the electric field between the plates is uniform and directed along the \(x\)-axis $\vec{E}(t)=E(t)\,\hat{x}$. \underline{Using Poynting’s theorem}, determine the energy stored in the capacitor at a given time. --- \textit{Solutions without using Poynting’s theorem will not receive credit.}
+
+\vspace*{0.8cm}
+\begin{center}
+\fbox{%
+\begin{minipage}{0.96\textwidth}
+\begin{center}
+\textbf{\underline{Maxwell's equations}}
+\end{center}
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{align*}
+\oint_S \vec{E} \cdot d\vec{a} &= \frac{Q_{\mathrm{enc}}}{\varepsilon_0} \\
+\oint_S \vec{B} \cdot d\vec{a} &= 0 \\
+\oint_C \vec{E} \cdot d\vec{\ell} &= -\frac{d}{dt}\int_S \vec{B} \cdot d\vec{a} \\
+\oint_C \vec{B} \cdot d\vec{\ell} &= \mu_0 I_{\mathrm{enc}} + \mu_0\varepsilon_0 \frac{d}{dt}\int_S \vec{E} \cdot d\vec{a}
+\end{align*}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{align*}
+\nabla \cdot \vec{E} &= \frac{\rho}{\varepsilon_0} \\
+\nabla \cdot \vec{B} &= 0 \\
+\nabla \times \vec{E} &= -\frac{\partial \vec{B}}{\partial t} \\
+\nabla \times \vec{B} &= \mu_0 \vec{J} + \mu_0\varepsilon_0 \frac{\partial \vec{E}}{\partial t}
+\end{align*}
+\end{minipage}
+\end{minipage}%
+}
+\end{center}
+
+\end{document}
+

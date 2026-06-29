@@ -1,0 +1,257 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc} 
+\usepackage{amsmath}
+\usepackage[a4paper, margin=0.3in,top=0.1in, bottom=0.3in]{geometry} % Adjust the margin here
+\usepackage{multirow}
+\usepackage{circuitikz}
+\usepackage{nopageno}
+\usepackage{graphicx} % Add this line to include graphics
+\setlength{\parindent}{0pt} % Set global no indent
+    
+\title{{\large Department of Physics, FNSPE, CTU in Prague} \\
+                  02YELMA - Electricity and Magnetism \\ 
+          {\Large \textbf{Final Exam - Solutions}}\vspace{-1cm}}
+\date{}
+\author{}
+
+\begin{document}
+
+\maketitle
+\vspace{-0.9cm}
+
+\noindent
+
+\textbf{Q1:} (a) Energy is conserved in the circuit, so the total voltage drop across the circuit elements must equal the applied voltage $V(t)=V_R+V_L+V_C$. The voltage drops are
+
+\[
+V_R = R_{\rm eq} I, \quad V_L = L_{\rm eq}\frac{dI}{dt}, \quad V_C = \frac{q}{C_{\rm eq}}
+\]
+where $R_{\rm eq}$, $L_{\rm eq}$, and $C_{\rm eq}$ are the equivalent resistance, inductance, and capacitance of the circuit, respectively. The charge on the capacitor is related to the current by $I=dq/dt$. Thus,
+
+\[
+V_0\sin(\omega t)
+=
+R_{\rm eq} I
++
+L_{\rm eq}\dot{I}
++
+\frac{q}{C_{\rm eq}} ~~\xrightarrow{d/dt}~~ V_0\omega\cos(\omega t)
+=
+R_{\rm eq}\dot{I}
++
+L_{\rm eq}\ddot{I}
++
+\frac{1}{C_{\rm eq}}I.
+\]
+
+Therefore, the governing differential equation is
+
+\[
+\boxed{
+\ddot{I}
++
+\frac{{R}_{\rm eq}}{L_{\rm eq}}\dot{I}
++
+\frac{1}{L_{\rm eq}C_{\rm eq}}I
+=
+\frac{V_0\omega}{L_{\rm eq}}\cos(\omega t)
+}
+\]
+
+(b) The governing equation describes a driven oscillation with natural frequency $\omega_0=\sqrt{1/(L_{\rm eq}C_{\rm eq})}$. For the current amplitude to be maximum, the driving frequency must match the natural frequency, i.e., $\omega=\omega_0$, so that the circuit is driven at its resonance frequency. Therefore, by considering the equivalent parameters $R_{\rm eq}=\frac{R_1R_2}{R_1+R_2}$, $L_{\rm eq}=L_1+L_2$, and $C_{\rm eq}=C_1+C_2$, $\omega$ must be set to
+\[
+\boxed{
+\omega_0
+=
+\frac{1}{\sqrt{L_{\rm eq}C_{\rm eq}}}
+=
+\frac{1}{\sqrt{(L_1+L_2)(C_1+C_2)}}
+}.
+\]
+
+(c) At resonance, we know that only the resistor dissipates energy, so the average power dissipated is
+
+\[ \langle P \rangle =
+\langle P(t) \rangle=\langle I^2(t) \rangle\,R_{\rm eq}=R_{\rm eq} I_0^2 \langle \sin^2(\omega_0 t) \rangle \implies \boxed{\langle P \rangle=\frac{1}{2}\frac{R_1R_2}{R_1+R_2} I_0^2}
+\]
+
+\textbf{Q2:} 
+Because of cylindrical symmetry, the electric field can only have a radial component, $\vec E(r,t)=E_r(r,t)\,\hat r$. Consider a cylindrical Gaussian surface of radius \(r\) and length \(L\), where \(a<r<b\) and $E_r$ is constant, by Gauss's law,
+\[
+E_r(r,t)\,(2\pi rL)
+=
+\frac{\lambda(t)L}{\varepsilon_0} \implies \vec E(r,t)
+=
+\frac{\lambda(t)}{2\pi\varepsilon_0 r}\,\hat r,
+~~\text{for}~~a<r<b
+\]
+where \(\lambda(t)\) is the charge per unit length on the inner conductor. The voltage difference between the conductors is $V(t)= -\int_a^b \vec E\cdot d\vec l$. Therefore, its magnitude is
+\[
+V(t)
+=
+\frac{\lambda(t)}{2\pi\varepsilon_0}
+\ln\!\left(\frac{b}{a}\right) \rightarrow \lambda(t)
+=
+\frac{2\pi\varepsilon_0\,V(t)} 
+{\ln(b/a)} =
+\frac{2\pi\varepsilon_0 V_0\cos(\omega t)}
+{\ln(b/a)} \implies \boxed{
+\vec E(r,t)
+=
+\frac{V_0\cos(\omega t)}
+{r\,\ln(b/a)}
+\,\hat r,
+\qquad a<r<b.
+}
+\]
+
+The field points radially outward when \(\cos(\omega t)>0\) and inward when \(\cos(\omega t)<0\). To calculate the electric field for \(r>b\), we need to determine the total charge enclosed by a cylindrical Gaussian surface of radius \(r>b\). The enclosed charge consists of the charge on the inner conductor and the equal and opposite charge on the outer conductor ,and hence,  $Q_{\rm enc}=0$. Therefore, according to Gauss's law, the electric field outside the coaxial capacitor is zero,
+
+\[
+\boxed{
+\vec E(r,t)=0,
+\qquad r>b.
+}
+\]
+
+\textbf{Q3:} In the rest frame \(S'\) of the capacitor, $\vec E' = E_0 \hat y$ and since the charges are stationary in \(S'\), $\vec B' = 0$. The frame \(S'\) moves with velocity $\vec v = v\hat x$ relative to the laboratory frame \(S\). Since \(\hat y\) is perpendicular to \(\hat x\),
+
+\[
+E'_{\parallel}=0,
+\qquad
+E'_{\perp}=E_0\hat y,
+\qquad
+B'_{\parallel}=0,
+\qquad
+B'_{\perp}=0.
+\]
+
+The parallel component of transformed electric field is
+
+\[
+E_{\parallel}=E'_{\parallel}=0.
+\]
+
+For the perpendicular component,
+
+\[
+E_{\perp}
+=
+\gamma
+\left(
+E'_{\perp}-\vec v\times \vec B'
+\right) = \gamma E'_{\perp}
+=
+\gamma E_0\hat y \implies \boxed{
+\vec E
+=
+\gamma E_0\,\hat y.
+}
+\]
+
+
+The parallel component remains $B_{\parallel}=0$. For the perpendicular component,
+
+\[
+B_{\perp}
+=
+\gamma
+\left(
+B'_{\perp}
++\frac{1}{c^2}\vec v\times \vec E'
+\right) = 
+\gamma
+\frac{1}{c^2}
+(\vec v\times\vec E') = 
+\gamma
+\frac{1}{c^2}
+(vE_0(\hat x\times\hat y)) \implies \boxed{
+\vec B
+=
+\gamma\frac{vE_0}{c^2}\,\hat z.
+}
+\]
+
+In the capacitor rest frame \(S'\), the charges on the plates are stationary. Therefore there is only an electric field between the plates but no magnetic field. In the laboratory frame \(S\), the entire capacitor moves with velocity
+\(\vec v=v\hat x\). The positive and negative surface charges on the plates now move together with the capacitor and constitute surface currents. Moving charges generate a magnetic field, which explains the appearance of magnetic field in the laboratory frame \(S\). The electric field is also modified by Lorentz contraction of the charge distribution. The surface charge density observed in \(S\) is larger by a factor \(\gamma\), leading to $\vec E=\gamma E_0\hat y$. Thus a purely electric field in one inertial frame appears as a combination of electric and magnetic fields in another inertial frame moving relative to it.
+
+\textbf{Q4:} (a) The magnetic flux through the rectangular loop is $\Phi_B(t)=B_0 Lx(t)$ where $x(t)$ is the position of the rod. Using flux rule for the induced EMF,
+
+\[
+\mathcal E
+=
+-\frac{d\Phi_B}{dt} =
+-B_0L\frac{dx}{dt} = -B_0Lv(t) \implies \boxed{
+\mathcal E(t)
+=
+-B_0Lv_0e^{-\alpha t}
+}
+\]
+The rod moves to the right, increasing the loop area. Therefore the magnetic flux through the loop increases in the \(+\hat z\) direction. According to Lenz's law, the induced current must oppose this increase, producing a magnetic field in the \(-\hat z\) direction. A clockwise current (viewed from \(+\hat z\)) generates a field into the page (\(-\hat z\)). Hence the induced current is \emph{clockwise}. Applying Ohm's law,
+
+\[
+I(t)=\frac{|\mathcal E(t)|}{R_{\rm tot}} \implies  \boxed{
+I(t)
+=
+\frac{B_0Lv_0}{R+R_0}
+e^{-\alpha t}.
+}
+\]
+
+The current flows \emph{clockwise} when viewed from the \(+\hat z\) direction.
+
+(b) The magnetic force on a current-carrying conductor is $\vec F=I\,\vec L\times \vec B$. For a clockwise current, the current in the moving rod flows downward, $\vec L=-L\hat y$. Therefore
+
+\[
+\vec F
+=
+I(-L\hat y)\times(B_0\hat z)=-IB_0L\,\hat x \implies \boxed{
+\vec F(t)
+=
+-\frac{B_0^2L^2v_0}{R+R_0}
+e^{-\alpha t}\,\hat x.
+}
+\]
+The rod moves in the \(+\hat x\) direction. The magnetic force is $\vec F \propto -\hat x$, opposite to the motion. Therefore the induced current creates a magnetic force that resists the increase of magnetic flux, exactly as required by Lenz's law.
+
+(c) The total electrical power dissipated is $P_{\rm elec}=I^2(R+R_0)$. Using the result for the current,
+
+\[
+P_{\rm elec}
+=
+\left(
+\frac{B_0Lv_0}{R+R_0}
+e^{-\alpha t}
+\right)^2
+(R+R_0) \implies \boxed{
+P_{\rm elec}(t)
+=
+\frac{B_0^2L^2v_0^2}{R+R_0}
+e^{-2\alpha t}.
+}
+\]
+To calculate the mechanical power supplied to maintain the motion, we consider Newton's second law:
+\[
+m\dot{v} = F_{\rm ext} - F_{\rm mag} \implies P_{\rm ext} = F_{\rm ext}v =  \left(\frac{B_0^2L^2}{R+R_0}-m\alpha \right) v_0^2 e^{-2\alpha t} 
+\]
+where $F_{\rm mag} = |\vec F| = \frac{B_0^2L^2v_0}{R+R_0} e^{-\alpha t}$ is the magnetic drag force and $\dot{v} = -\alpha v_0 e^{-\alpha t}$ is the acceleration of the rod. The rate of change of rod's kinetic energy is $\dot{K} = m v \dot{v} = -m\alpha v_0^2 e^{-2\alpha t}$. Therefore, the mechanical power supplied to maintain the motion must overcome both the magnetic drag and the loss of kinetic energy, i.e.,
+\[P_{\rm mech} = P_{\rm ext} - \dot{K} = \left(\frac{B_0^2L^2}{R+R_0}\right) v_0^2 e^{-2\alpha t} = P_{\rm elec} \implies \boxed{
+P_{\rm mech}
+=
+\dot{K}+P_{\rm elec}
+}
+\]
+The mechanical power supplied equals the rate of change of the rod's kinetic energy plus the rate of Joule heating, cofirming the conservation of energy in the system. Define a natural magnetic-damping rate $\alpha_{\rm mag} = \frac{B_0^2L^2}{m(R+R_0)}$. So,
+\begin{itemize}
+\item If $\alpha < \alpha_{\rm mag}: P_{\rm ext} > 0$, the agent pushes the rod (rod decelerates more slowly than free magnetic braking).
+\item If $\alpha = \alpha_{\rm mag}: P_{\rm ext} = 0$,  no agent needed — the rod coasts freely and all dissipated energy comes from its kinetic energy.
+\item If $\alpha > \alpha_{\rm mag}: P_{\rm ext} < 0$, the agent brakes the rod (it decelerates faster than magnetic damping alone could cause).
+\end{itemize} 
+
+
+
+
+
+
+\end{document}
+

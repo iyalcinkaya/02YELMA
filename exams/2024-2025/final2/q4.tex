@@ -1,0 +1,56 @@
+\section*{Question 4}
+Consider an electromagnetic plane wave propagating in the $+z$ direction in free space. Its electric field is given by
+\[
+\vec{E}(z,t) = E_0 \left[ \cos(kz-\omega t) \hat{x} + \alpha \cos(kz - \omega t - \pi/2) \hat{y}\right]
+\]
+where $E_0$ is a constant, $\alpha$ is a constant concerning the polarization.
+\begin{enumerate}
+    \item [(a)] Identify the polarization of the wave for $\alpha = 0$ and $\alpha = 1$? --- \textit{0.2 pts}
+    \item[(b)] By using the identity $\vec{B}=\frac{1}{c}\hat{z}\times\vec{E}$, find the magnetic field component $\vec{B}(z,t)$. --- \textit{0.2 pts}
+    \item[(c)] Compute the instantaneous Poynting vector $\vec{S}(z,t)=\frac{1}{\mu_0} \vec{E} \times \vec{B}$. --- \textit{0.3 pts}
+    \item[(d)] Compute the time-averaged Poynting vector $\langle \vec{S} \rangle \equiv \frac{1}{T} \int_0^T \vec{S}(z,t) dt$, where $T$ is the period of the wave. Discuss how the energy flux depends on $\alpha$. --- \textit{0.3 pts}
+    
+    \underline{Given}: $\langle \cos^2\theta \rangle = \langle \sin^2\theta \rangle = \frac{1}{2}$ 
+\end{enumerate}
+
+ \section*{Solution:}
+
+ \begin{solution}
+(a) For $\alpha = 0$, the electric field is purely in the $x$-direction, which corresponds to linear polarization along the $x$-axis. For $\alpha = 1$, the electric field has components in both the $x$ and $y$ directions, which results in circular polarization in the $xy$-plane, as the two components are equal in magnitude and vary sinusoidally with a phase difference of $\frac{\pi}{2}$.
+
+\noindent
+(b) Calculating the cross product, we have:
+\[
+\vec{B}(z,t) = \frac{1}{c} \hat{z} \times \left[ E_0 \cos(kz - \omega t) \hat{x} + \alpha E_0 \sin(kz - \omega t) \hat{y} \right]
+\]
+Using the right-hand rule, we find:
+\[
+\boxed{
+\vec{B}(z,t) = \frac{1}{c} \left[ E_0 \cos(kz - \omega t) \hat{y} - \alpha E_0 \sin(kz - \omega t) \hat{x} \right]
+}\]
+
+\noindent
+(c)
+Calculating the cross product, we have:
+\[
+\vec{S}(z,t) = \frac{1}{\mu_0} \left[ E_0 \left( \cos(kz - \omega t) \hat{x} + \alpha \sin(kz - \omega t) \hat{y} \right) \times \left( \frac{E_0}{c} \cos(kz - \omega t) \hat{y} - \frac{\alpha E_0}{c} \sin(kz - \omega t) \hat{x} \right) \right]
+\]
+Using the properties of the cross product, we find:
+\[\boxed{
+\vec{S}(z,t) = \frac{E_0^2}{\mu_0 c} \left( \cos^2(kz - \omega t) + \alpha \sin^2(kz - \omega t) \right) \hat{z}
+}\]
+\noindent
+(d)The time-average over one period $T=2\pi/\omega$ gives
+  \[
+    \bigl\langle\cos^2\theta+\alpha^2\sin^2\theta\bigr\rangle
+    = \frac{1+\alpha^2}{2}
+    \quad\Longrightarrow\quad
+    \boxed{\langle\vec{S}\rangle
+      = \frac{E_0^2}{\mu_0\,c}\,\frac{1+\alpha^2}{2}\;\hat{z}.}
+  \]
+  Hence the average energy flux scales as $(1+\alpha^2)/2$, giving
+  \begin{itemize}
+    \item $\alpha=0$:~$\langle S\rangle=E_0^2/(2\mu_0c)$ (linear),
+    \item $\alpha=1$:~$\langle S\rangle=E_0^2/(\mu_0c)$ (circular).
+  \end{itemize}
+\end{solution}

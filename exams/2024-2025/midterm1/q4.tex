@@ -1,0 +1,63 @@
+\section*{Question 4}
+Two charges are placed in two different arrangements as shown below: 
+
+\tdplotsetmaincoords{70}{110}
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[tdplot_main_coords, scale=1.4]
+
+% Axes
+\draw[->] (0,0,0) -- (0,0,2) node[anchor=south]{$z$};
+\draw[->] (0,0,0) -- (2,0,0) node[anchor=north east]{$x$};
+\draw[->] (0,0,0) -- (0,2,0) node[anchor=west]{$y$};
+
+% Arrangement (a)
+% Labels
+\node at (1,-1,2.) {\textbf{(a)}};
+
+
+% Charge at (0,0,a)
+\filldraw[red] (0,0,1.5) circle (2pt) node[anchor=south east] {$3q$};
+% Charge at (0,0,0)
+\filldraw[blue] (0,0,0) circle (2pt) node[anchor=north west] {$-q$} node[anchor=east, black] {$O$};
+
+% Dashed vertical line for clarity
+\draw[dashed] (0,0,0) -- (0,0,1.5) node[midway, right] {$a$};
+
+% Arrangement (b)
+% Shifted frame
+\begin{scope}[shift={(2,7,1.5)}]
+\draw[->] (0,0,0) -- (0,0,2) node[anchor=south]{$z$};
+\draw[->] (0,0,0) -- (2,0,0) node[anchor=north east]{$x$};
+\draw[->] (0,0,0) -- (0,2,0) node[anchor=west]{$y$};
+
+\node at ((1,-1,2.) {\textbf{(b)}};
+
+
+% Charge at (0,0,0)
+\filldraw[red] (0,0,0) circle (2pt) node[anchor=north west] {$3q$} node[anchor=east, black] {$O$};
+% Charge at (0,0,-1.5)
+\filldraw[blue] (0,0,-1.5) circle (2pt) node[anchor=north east] {$-q$};
+
+% Dashed vertical line for clarity
+\draw[dashed] (0,0,-1.5) -- (0,0,0) node[midway, left] {$a$};
+\end{scope}
+\end{tikzpicture}
+\end{figure}
+
+\noindent
+For each arrangement, determine 
+\begin{enumerate}
+    \item[(i)] The monopole moment, --- \textit{0.2 pts}
+    \item[(ii)] The dipole moment, --- \textit{0.4 pts}
+    \item[(iii)] The approximate potential (in spherical coordinates) using these moments. --- \textit{0.4 pts}  
+\end{enumerate}
+
+\vspace{0.5cm}
+\noindent
+\underline{Given}: The first two terms of multipole expansion of the potential is given by 
+\begin{equation*}
+    V(\vec{r}) = \frac{1}{4\pi\epsilon_0} \left( \frac{Q}{r} + \frac{\vec{p}\cdot\hat{r}}{r^2} + \hdots \right),
+\end{equation*}
+where $Q$ is the monopole moment, $\vec{p}$ is the dipole moment. The spherical coordinates are given by $(r,\theta,\phi)$, where $r$ is the distance from the origin, $\theta$ is the polar angle, and $\phi$ is the azimuthal angle.
+ \section*{Solution:}

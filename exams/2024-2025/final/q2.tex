@@ -1,0 +1,82 @@
+\section*{Question 2}
+Assume that in the laboratory frame $S$, there is an electric field $\vec{E} = E_0 \hat{y}$ and no magnetic field $\vec{B} = 0$. An inertial observer $S'$ moves relative to $S$ with constant velocity $v$ along the $x$-axis. All the axis in both frames are parallel and stay parallel.
+\begin{enumerate}
+    \item[(a)] Use the field transformation expressions given below for $\vec{E}$ and $\vec{B}$ to find the electric and magnetic fields $\vec{E}'$ and $\vec{B}'$ as measured in the frame $S'$. --- \textit{0.4 pts}
+    \item[(b)] According to your result in (a), what does an observer in $S'$ measure for the electric field $\vec{E}'$ and the magnetic field $\vec{B}'$? Explain it shortly. --- \textit{0.4 pts}
+    \item[(c)] What is the force $\vec{F}'=q\left(\vec{E}' + \vec{u}'\times \vec{B}'\right)$ acting on the particle in the frame $S'$? Note that the velocity $\vec{u}'$ of the particle is given by the vector $\vec{u}'=\begin{pmatrix}
+    u'_x \\ u'_y \\ u'_z
+\end{pmatrix}$. --- \textit{0.2 pts}
+\end{enumerate}
+\noindent
+\underline{Given:}
+The fields $\vec{E}$ and $\vec{B}$ in the reference frame $S$ appear as follows in a frame $S'$ moving with constant velocity $v$ along the x-axis relative to $S$:
+\[
+\vec{E} = \begin{pmatrix}
+E_x \\ E_y \\ E_z
+\end{pmatrix} \longrightarrow
+\vec{E}' = \begin{pmatrix}
+E'_x \\ E'_y \\ E'_z
+\end{pmatrix} = \begin{pmatrix}
+E_x \\ \gamma \left( E_y - v B_z \right)\\ \gamma \left( E_z + v B_y \right)
+\end{pmatrix}
+\]
+\[
+\vec{B} = \begin{pmatrix}
+B_x \\ B_y \\ B_z
+\end{pmatrix} \longrightarrow
+\vec{B}' = \begin{pmatrix}
+B'_x \\ B'_y \\ B'_z
+\end{pmatrix} = \begin{pmatrix}
+B_x \\ \gamma \left( B_y + \frac{v}{c^2} E_z \right) \\ \gamma \left( B_z - \frac{v}{c^2} E_y \right)
+\end{pmatrix}
+\]
+where $\gamma = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}}$ is the Lorentz factor, and $c$ is the speed of light in vacuum.
+
+\section*{Solution:}
+
+\begin{solution}
+(a) Using the field transformation equations, we can find the electric and magnetic fields in the frame $S'$:
+\[
+\boxed{
+\vec{E}' = \begin{pmatrix}
+0 \\ \gamma E_0 \\ 0
+\end{pmatrix}, \quad
+\vec{B}' = \begin{pmatrix}
+0 \\ 0 \\ -\frac{\gamma v E_0}{c^2}
+\end{pmatrix}
+}
+\]
+\noindent
+(b) In the frame $S'$, the electric field $\vec{E}'$ is directed along the $y$-axis with magnitude $\gamma E_0$, while the magnetic field $\vec{B}'$ is directed along the $z$-axis with magnitude $B_z' \equiv -\frac{\gamma v E_0}{c^2}$. This means that an observer in $S'$ sees a stronger electric field due to the Lorentz factor $\gamma$, and a magnetic field in the $z$-direction that arises from the motion relative to the electric field in frame $S$.
+
+\noindent
+(c) The force acting on a particle with charge $q$ in the frame $S'$ is given by:
+\[\vec{F}' = q\left(\vec{E}' + \vec{u}' \times \vec{B}'\right)\]
+Substituting the expressions for $\vec{E}'$ and $\vec{B}'$, we have:
+\[
+\vec{F}' = q\begin{pmatrix}
+0 \\ \gamma E_0 \\ 0
+\end{pmatrix} + q\vec{u}' \times \begin{pmatrix}
+0 \\ 0 \\ B_z'
+\end{pmatrix}
+\]
+Calculating the cross product $\vec{u}' \times \vec{B}'$:
+\[\begin{pmatrix}
+u'_x \\ u'_y \\ u'_z
+\end{pmatrix} \times \begin{pmatrix}
+0 \\ 0 \\ B_z'
+\end{pmatrix} = \begin{pmatrix}
+u'_y B_z' \\  -u'_x B_z' \\ 0
+\end{pmatrix}
+\]
+Thus, the force becomes:
+\[
+\boxed{
+\vec{F}' = q\begin{pmatrix}
+u'_y B_z' \\ \gamma E_0 - u'_x B_z' \\ 0
+\end{pmatrix}
+}
+\]
+\end{solution}
+
+

@@ -1,0 +1,82 @@
+\section*{Question 1}
+Consider a long shell of radius $R$ with a uniform surface charge density $\sigma$. Inside this cylindrical shell, coaxially placed, is a long solid cylinder of radius $a$ ($a<R$) with a uniform volume charge density $\rho$. 
+\begin{enumerate}
+    \item[(a)] Find the electric field in the regions $ 0 \leqslant r \leq a$, $ a \leqslant r \leq R$ and $r \geqslant R$ --- 0.6 pts
+    \item[(b)] Determine the potential difference $V$ between the surface of the solid cylinder (radius $a$) and the cylindrical shell (radius $R$) --- 0.4 pts
+\end{enumerate}
+\section*{Solution:}
+
+\begin{solution}
+(a) We use Gauss's Law in cylindrical symmetry:
+\[
+    \oint \vec{E} \cdot d\vec{A} = \frac{Q_{\text{enc}}}{\varepsilon_0}
+    \]
+    where $\vec{E}$ is the electric field, and $Q_{\text{enc}}$ is the charge enclosed by a cylindrical Gaussian surface of radius $r$ and length $L$.
+
+\noindent
+\textbf{Region I:} $0 \leq r \leq a$
+
+\noindent
+In this region, we are inside the solid cylinder. The enclosed charge is:
+    \[
+    Q_{\text{enc}} = \rho \cdot \pi r^2 L
+    \]
+    Applying Gauss's Law:
+    \[
+    E \cdot (2\pi r L) = \frac{\rho \pi r^2 L}{\varepsilon_0}
+    \quad \Rightarrow \quad
+    E = \frac{\rho r}{2\varepsilon_0}
+    \]
+
+\noindent
+\textbf{Region II:} $a \leq r \leq R$
+
+\noindent
+Here, the Gaussian surface encloses the entire solid cylinder:
+    \[
+    Q_{\text{enc}} = \rho \cdot \pi a^2 L
+    \]
+    Applying Gauss’s Law:
+    \[
+    E \cdot (2\pi r L) = \frac{\rho \pi a^2 L}{\varepsilon_0}
+    \quad \Rightarrow \quad
+    E = \frac{\rho a^2}{2\varepsilon_0 r}
+    \]
+
+\noindent
+\textbf{Region III:} $r \geq R$
+\noindent
+    The Gaussian surface now encloses both the solid cylinder and the shell. The total enclosed charge is:
+    \[
+    Q_{\text{enc}} = \rho \pi a^2 L + \sigma \cdot 2\pi R L
+    \]
+    Using Gauss’s Law:
+    \[
+    E \cdot (2\pi r L) = \frac{1}{\varepsilon_0} \left( \rho \pi a^2 L + 2\pi R \sigma L \right)
+    \]
+    \[
+    \Rightarrow E = \frac{1}{2\varepsilon_0 r} \left( \rho a^2 + 2R \sigma \right)
+    \]
+
+\noindent
+(b) The electric potential difference is given by:
+    \[
+    V(a) - V(R) = -\int_a^R E(r) \, dr
+    \]
+    In the range $a \leq r \leq R$, we use:
+    \[
+    E(r) = \frac{\rho a^2}{2\varepsilon_0 r}
+    \]
+    So:
+    \[
+    V(a) - V(R) = -\int_a^R \frac{\rho a^2}{2\varepsilon_0 r} \, dr
+    = -\frac{\rho a^2}{2\varepsilon_0} \int_a^R \frac{1}{r} \, dr
+    \]
+    \[
+    = -\frac{\rho a^2}{2\varepsilon_0} \ln\left( \frac{R}{a} \right)
+    \]
+\end{solution}
+
+
+
+

@@ -1,0 +1,101 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc} 
+\usepackage{amsmath}
+\usepackage[a4paper, margin=0.3in,top=0.1in, bottom=0.3in]{geometry} % Adjust the margin here
+\usepackage{multirow}
+\usepackage{circuitikz}
+\usepackage{nopageno}
+\usepackage{graphicx} % Add this line to include graphics
+\setlength{\parindent}{0pt} % Set global no indent
+    
+\title{{\large Department of Physics, FNSPE, CTU in Prague} \\
+                  02YELMA - Electricity and Magnetism \\ 
+          {\Large \textbf{Final Exam - Solutions 2}}\vspace{-1cm}}
+\date{}
+\author{}
+
+\begin{document}
+
+\maketitle
+\vspace{-0.9cm}
+
+\noindent
+
+\textbf{Q1:} (a) Energy is conserved in the circuit, so the total voltage drop across the circuit elements must equal the applied voltage $V=V_R+V_L+V_C=0$. The voltage drops are
+
+\[
+V_R = R I, \quad V_L = L\frac{dI}{dt}, \quad V_C = \frac{q}{C}
+\]
+
+The charge on the capacitor is related to the current by $I=dq/dt$. Thus,
+
+\[
+R I
++
+L\dot{I}
++
+\frac{q}{C} = 0 ~~\xrightarrow{d/dt}~~ 
+R\dot{I}
++
+L\ddot{I}
++
+\frac{1}{C}I=0 \implies \boxed{
+\ddot{I}
++
+\frac{{R}}{L}\dot{I}
++
+\frac{1}{LC}I
+=
+0
+}
+\]
+
+(b) The governing equation describes a damped oscillation where the coefficient of the first derivative term determines the amount of damping: $2\beta = R/L$. To obtain the characteristic equation, we assume a solution of the form $I(t)=e^{\lambda t}$, which gives
+\[
+\lambda^2 + \frac{R}{L}\lambda + \frac{1}{LC} = 0 \implies \lambda = -\frac{R}{2L} \pm \sqrt{\left(\frac{R}{2L}\right)^2 - \frac{1}{LC}}.
+\]
+For underdamped oscillations, the discriminant must be negative, which gives the condition on $R$, $L$, and $C$:
+\[
+\boxed{
+R<2\sqrt{L/C}
+}
+\]
+For current to fall to half its initial value:
+\[
+\frac{I_\text{max}e^{-\beta t}}{I_\text{max}} = \frac{1}{2} \implies e^{-\beta t} = \frac{1}{2} \implies \boxed{t = \frac{\ln 2}{\beta} = \frac{2L\ln 2}{R}}
+\]
+
+(c) The total energy in the circuit is $U = U_L + U_C = \frac{1}{2}LI^2 + \frac{1}{2}CV^2$. If the capacitor is initially charged to $V_0$, then the initial energy is $U_0 = \frac{1}{2}CV_0^2$. When the current is at its maximum, the energy is stored entirely in the inductor, so $U = \frac{1}{2}LI_\text{max}^2$. At resonance, we know that only the resistor dissipates energy and current behaves as $I \sim I_0\sin(\omega_0 t)$. Therefore, the average energy dissopated in the resistor over one cycle is
+\[
+P_\text{avg} = \frac{1}{2}RI_0^2,~~T = \frac{2\pi}{\omega_0}  \implies \Delta E = P_\text{avg}T = \pi RI_0^2/\omega_0.
+\]
+Therefore, the quality factor is
+\[
+Q = 2\pi\frac{U}{\Delta E} = 2\pi\frac{\frac{1}{2}LI_0^2}{\pi RI_0^2/\omega_0} = \frac{\omega_0 L}{R} = \frac{1}{R}\sqrt{\frac{L}{C}} \implies \boxed{
+Q = \frac{1}{R}\sqrt{\frac{L}{C}}
+}
+\]
+
+
+\textbf{Q2:} (a) Because of cylindrical symmetry, the magnetic field can only have a angular component, $\vec B(\phi,t)=B(\phi,t)\,\hat \phi$. Consider an Amperian loop of radius \(a<s<b\) coaxial with the shells:
+\[
+B(\phi,t)\,(2\pi s)
+=
+\mu_0 I(t) \implies \boxed{\vec B(\phi,t)
+=
+\frac{\mu_0 I(t)}{2\pi s}\,\hat \phi,
+~~\text{for}~~a<s<b.
+}
+\]
+
+
+\textbf{Q3:}
+
+\textbf{Q4:} 
+
+
+
+
+
+\end{document}
+

@@ -1,0 +1,94 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[utf8]{inputenc} 
+\usepackage{amsmath}
+\usepackage[a4paper, margin=0.6in,top=0.3in, bottom=0.3in]{geometry} % Adjust the margin here
+\usepackage{multirow}
+\usepackage{nopageno}
+\usepackage{graphicx} % Add this line to include graphics
+\usepackage{tikz} % Add this line to use TikZ for drawing
+\usepackage{tikz-3dplot} % Add this line to use 3D plotting
+\setlength{\parindent}{0pt} % Set global no indent
+    
+\title{{\large Department of Physics, FNSPE, CTU in Prague} \\
+                  02YELMA - Electricity and Magnetism \\ 
+          {\Large \textbf{Midterm 1}}\vspace{-1cm}}
+\date{27.3.2026 / 16:00 - 17:30}
+\author{}
+
+\begin{document}
+
+\maketitle
+
+\textbf{Q1:} A solid insulating sphere of radius $R$ carries a spherically symmetric, non-uniform charge distribution given by $\rho(r) = \rho_0 \left(1 - \frac{r}{R}\right)$, where $0 < r < R$, $\rho(r)=0$ for $r \geq R$, and $\rho_0$ is a constant. Calculate the electric field $\vec{E}(r)$ as a function of the distance $r$ from the center of the sphere, for $0 < r < R$ and $r \geq R$. --- \textit{1 pt}
+
+\vspace*{0.3cm}
+\textbf{Q2:} Two large, finite, parallel conducting plates of area $A$ are placed a distance $d$ apart in vacuum. One plate carries a total charge $+Q$, and the other carries $-Q$. The plates are electrically isolated and no the field is considered to be always uniform between the plates. The electric field outside the region between the plates is negligible.
+
+\begin{enumerate}
+    \item[(a)] Find the electrostatic energy stored in the system by using the integral $U = \frac{\epsilon_0}{2} \int\limits_{\text{all space}}  E^2 d\tau$, where $\epsilon_0$ is a constant, $\vec{E}$ is the electric field, and $d\tau$ is the volume element. --- \textit{0.6 pts}
+    \item[(b)] Suppose the distance between the plates is increased by a small amount $\Delta x$ with the charges remaining constant. How much work must be done in this process? --- \textit{0.4 pts}
+\end{enumerate}
+
+\vspace*{0.3cm}
+\textbf{Q3:} A thin rod of length $L$ lies along the $x$-axis extending from $x = 0$ to $x = L$. The rod carries a nonuniform linear charge density given by $\lambda(x) = \lambda_0 \frac{x}{L}$
+where $\lambda_0$ is a constant with units of charge per unit length.  What is the net electric potential $V$ at $x=-d$ due to the entire rod? Take the reference $V(\infty)=0$. --- \textit{1 pt}
+
+\underline{Given:} $\int_{0}^{x_0} \frac{x \, dx}{a+x} = x_0 - a \ln\left(\frac{a+x_0}{a}\right)$, where $x_0>0$ and $a>0$ are constants.
+
+\vspace*{0.3cm}
+\textbf{Q4:} The first two terms of multipole expansion of the potential is given by 
+\begin{equation*}
+    V(\vec{r}) = \frac{1}{4\pi\epsilon_0} \left( \frac{Q}{r} + \frac{\vec{p}\cdot\hat{r}}{r^2} + \hdots \right)
+\end{equation*}
+where $Q$ is the monopole moment, $\vec{p}$ is the dipole moment. The spherical coordinates are given by $(r,\theta,\phi)$, where $r$ is the distance from the origin, $\theta$ is the polar angle, and $\phi$ is the azimuthal angle. Two charges are placed in two different arrangements as shown below: 
+
+\tdplotsetmaincoords{70}{110}
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[tdplot_main_coords, scale=1.4]
+
+% Axes
+\draw[->] (0,0,0) -- (0,0,2) node[anchor=south]{$z$};
+\draw[->] (0,0,0) -- (2,0,0) node[anchor=north east]{$x$};
+\draw[->] (0,0,0) -- (0,2,0) node[anchor=west]{$y$};
+
+% Arrangement (a)
+% Labels
+\node at (1,-1,2.) {\textbf{(a)}};
+
+
+% Charge at (0,0,a)
+\filldraw[red] (0,0,1.5) circle (2pt) node[anchor=south east] {$3q$};
+% Charge at (0,0,0)
+\filldraw[blue] (0,0,0) circle (2pt) node[anchor=north west] {$-q$} node[anchor=east, black] {$O$};
+
+% Dashed vertical line for clarity
+\draw[dashed] (0,0,0) -- (0,0,1.5) node[midway, right] {$a$};
+
+% Arrangement (b)
+% Shifted frame
+\begin{scope}[shift={(2,7,1.5)}]
+\draw[->] (0,0,0) -- (0,0,2) node[anchor=south]{$z$};
+\draw[->] (0,0,0) -- (2,0,0) node[anchor=north east]{$x$};
+\draw[->] (0,0,0) -- (0,2,0) node[anchor=west]{$y$};
+
+\node at (1,-1,2.) {\textbf{(b)}};
+
+
+% Charge at (0,0,0)
+\filldraw[red] (0,0,0) circle (2pt) node[anchor=north west] {$3q$} node[anchor=east, black] {$O$};
+% Charge at (0,0,-1.5)
+\filldraw[blue] (0,0,-1.5) circle (2pt) node[anchor=north east] {$-q$};
+
+% Dashed vertical line for clarity
+\draw[dashed] (0,0,-1.5) -- (0,0,0) node[midway, left] {$a$};
+\end{scope}
+\end{tikzpicture}
+\end{figure}
+
+\noindent
+For each arrangement, determine the monopole moment \textit{(0.3 pts)}, the dipole moment \textit{(0.3 pts)}, and the approximate potential in spherical coordinates up to the dipole term \textit{(0.4 pts)}.
+
+\end{document}
+

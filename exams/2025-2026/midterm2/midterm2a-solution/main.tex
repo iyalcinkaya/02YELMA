@@ -1,0 +1,226 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc} 
+\usepackage{amsmath}
+\usepackage[a4paper, margin=0.6in,top=0.3in, bottom=0.3in]{geometry} % Adjust the margin here
+\usepackage{multirow}
+\usepackage{nopageno}
+\usepackage{graphicx} % Add this line to include graphics
+\usepackage{tikz} % Add this line to use TikZ for drawing
+\usepackage{tikz-3dplot} % Add this line to use 3D plotting
+\setlength{\parindent}{0pt} % Set global no indent
+    
+\title{{\large Department of Physics, FNSPE, CTU in Prague} \\
+                  02YELMA - Electricity and Magnetism \\ 
+          {\Large \textbf{Midterm 2 (A - Solution)}}\vspace{-1cm}}
+\date{}
+\author{}
+
+\begin{document}
+
+\maketitle
+
+\textbf{Q1:} By cylindrical symmetry, the magnetic field is purely azimuthal, $\vec B(s)=B_\phi(s)\,\hat\phi$. Using Ampère’s law for a circular loop of radius \(s\),
+
+\[
+B_\phi(s)(2\pi s)=\mu_0 I_{\text{enc}}
+\]
+
+We first relate \(J_0\) to the total current \(I\):
+\[
+I=\int_0^R J_0\left(\frac{s}{R}\right)(2\pi s\,ds) \Rightarrow \boxed{J_0=\frac{3I}{2\pi R^2}}
+\]
+
+For \(s<R\) (inside the conductor):
+
+\[
+I_{\text{enc}}(s)=\int_0^s J_0\left(\frac{s'}{R}\right)(2\pi s' \, ds')
+=\frac{2\pi J_0 s^3}{3R}
+\]
+\[
+B_\phi(s)(2\pi s)=\mu_0 \frac{2\pi J_0 s^3}{3R}
+\]
+\[
+\boxed{
+\vec B(s)=\frac{\mu_0 I}{2\pi R^3}s^2\,\hat\phi
+\qquad (s<R)
+}
+\]
+
+For \(s>R\) (outside the conductor):
+\[
+B_\phi(s)(2\pi s)=\mu_0 I
+\]
+
+\[
+\boxed{
+\vec B(s)=\frac{\mu_0 I}{2\pi s}\,\hat\phi
+\qquad (s>R)
+}
+\]
+
+
+\vspace*{0.3cm}
+\textbf{Q2:} Between the plates, the changing electric field produces a magnetic field. Using Ampère-Maxwell law for a circular loop of radius \(s<R\),
+
+\[
+\oint \vec B\cdot d\vec l
+=
+\mu_0\epsilon_0
+\frac{d\Phi_E}{dt}
+\]
+\[
+B_\phi(s)(2\pi s)
+=
+\mu_0\epsilon_0
+\frac{d}{dt}\left(E\pi s^2\right)
+\]
+
+\[
+\vec B(s)
+=
+\frac{\mu_0\epsilon_0 s}{2}
+\frac{dE}{dt}\,\hat\phi
+\]
+\[
+\vec S
+=
+\frac{1}{\mu_0}\vec E\times\vec B =
+-\frac{\epsilon_0 s}{2}
+E\frac{dE}{dt}\,\hat s
+\]
+which points radially inward, indicating energy flows into the capacitor. Energy enters through the cylindrical side surface of area $dA=(2\pi R d)$
+
+\[
+P_{\text{in}}
+=
+\int \vec S\cdot d\vec a
+=
+\frac{\epsilon_0 R}{2}
+E\frac{dE}{dt}(2\pi R d) = \epsilon_0\pi R^2 d\,
+E\frac{dE}{dt} = \frac{dU}{dt}
+\]
+
+\[
+\frac{dU}{dt}
+=
+\epsilon_0\pi R^2 d\,
+E\frac{dE}{dt} \Rightarrow \boxed{
+U(t)
+=
+\frac{1}{2}\epsilon_0\pi R^2 d\,E(t)^2
+}
+\]
+
+
+\vspace*{0.3cm}
+\textbf{Q3:} Since the wave propagates in free space, it travels in the \(+\hat z\) direction. The corresponding electric field is perpendicular to both \(\vec B\) and the direction of propagation:
+
+\[
+\vec E(z,t)=E_0\sin(kz-\omega t)\,\hat x, ~~E_0=cB_0,~~c=\frac{1}{\sqrt{\mu_0\epsilon_0}}
+\]
+(a) The instantaneous Poynting vector is
+
+\[
+\vec S
+=
+\frac{1}{\mu_0}\vec E\times\vec B, ~~ S=
+\frac{1}{\mu_0}E_0B_0\sin^2(kz-\omega t) = \frac{cB_0^2}{\mu_0}\sin^2(kz-\omega t)
+\]
+
+
+\[
+\boxed{
+\langle S\rangle
+=
+\frac{cB_0^2}{2\mu_0}
+}~~\text{since}~~\langle \sin^2(\cdot)\rangle=\frac{1}{2}.
+\]
+
+The area of the circular surface is $A=\pi a^2$. Therefore the average power carried by the wave is $P=\langle S\rangle A$
+\[
+\boxed{
+P
+=
+\frac{cB_0^2}{2\mu_0}\,\pi a^2
+}
+\]
+
+\bigskip
+
+(b) The transmitted electric-field amplitude is $E_{\text{trans}}=E_0\cos\theta$ with $\theta=\frac{\pi}{4}$. Thus,
+
+\[
+E_{\text{trans}}
+=
+E_0\cos\left(\frac{\pi}{4}\right)
+=
+\frac{E_0}{\sqrt{2}}
+\]
+
+Since \(E_0=cB_0\), the transmitted magnetic-field amplitude is also reduced by the same factor:
+
+\[
+\boxed{
+B_{\text{trans}}
+=
+\frac{B_0}{\sqrt{2}}
+}
+\]
+
+\noindent
+
+\vspace*{0.3cm}
+\textbf{Q4:} Since the cylinder is metallic, the charge resides on its outer surface. The surface charge density is $\sigma=\frac{Q}{2\pi r h}$ because the curved surface area is $A=2\pi r h$ (neglecting the end caps). As the cylinder rotates, the surface charges move with tangential speed $v=\omega r$, thus the surface current density is
+
+\[
+K=\sigma v
+=
+\sigma \omega r = \frac{Q}{2\pi r h}\omega r = \frac{Q\omega}{2\pi h}
+\]
+
+
+
+If we treat the cylinder as stacked current loops, a thin strip of width \(dz\) carries current $dI=K\,dz$. Each strip forms a circular loop of area $A_{\text{loop}}=\pi r^2$ whose magnetic dipole moment is $d\mu=dI\cdot A_{\text{loop}}$. Therefore
+
+\[
+d\mu
+=
+K\,dz\cdot \pi r^2
+\]
+
+Integrating over the full height:
+
+\[
+\mu
+=
+\int_0^h K\pi r^2\,dz
+=
+K\pi r^2 h
+\]
+
+Substituting \(K\):
+
+\[
+\mu
+=
+\frac{Q\omega}{2\pi h}\cdot \pi r^2 h
+\]
+
+which gives
+
+\[
+\boxed{
+\mu
+=
+\frac{1}{2}Q\omega r^2
+} \Rightarrow \boxed{
+\vec{\mu}
+=
+\frac{1}{2}Q\omega r^2\,\hat z
+}
+\]
+
+
+
+\end{document}
+

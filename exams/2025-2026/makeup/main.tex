@@ -1,0 +1,71 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc} 
+\usepackage{amsmath}
+\usepackage[a4paper, margin=0.6in,top=0.3in, bottom=0.3in]{geometry} % Adjust the margin here
+\usepackage{multirow}
+\usepackage{nopageno}
+\usepackage{graphicx} % Add this line to include graphics
+\usepackage{tikz} % Add this line to use TikZ for drawing
+\usepackage{tikz-3dplot} % Add this line to use 3D plotting
+\setlength{\parindent}{0pt} % Set global no indent
+    
+\title{{\large Department of Physics, FNSPE, CTU in Prague} \\
+                  02YELMA - Electricity and Magnetism \\ 
+          {\Large \textbf{Make-up Exam}}\vspace{-1cm}}
+\date{27.5.2026 / 16:00 - 17:30}
+\author{}
+
+\begin{document}
+
+\maketitle
+
+\textbf{Q1:}
+A rectangular loop of dimensions $a$ and $b$ carries a steady current $I$. Write down the magnetic dipole moment $\vec{m}$ of the loop in terms of $I$, $a$, and $b$ and find the torque $\vec{\tau}$ acting on the loop when it is placed in a uniform external magnetic field $\vec{B}$ that points at an angle $\theta$ with respect to the normal vector of the loop.
+
+\vspace*{0.3cm}
+\textbf{Q2:} A long solenoid, of radius $a$, is driven by an alternating current, so that the magnetic field inside the solenoid is sinusoidal $\vec{B}(t) = B_0 \sin(\omega t) \hat{z}$ where $\hat{z}$ is the unit vector in the direction of the solenoid's axis. A circular loop of radius $a/2$ and resistance $R$, is placed inside the solenoid, and is coaxial with it. Find the current induced and the power dissipated in the loop as a function of time.
+
+\vspace*{0.3cm}
+\textbf{Q3:} The magnetic field component of a monochromatic electromagnetic wave propagating in free space is given by $\vec{B}(z,t) = B_0 \sin(kz - \omega t) \hat{y}$.
+\begin{enumerate}
+
+    \item[(a)] Find the average power transmitted through a circular area of radius \(a\) in the plane perpendicular to the direction of propagation.
+    \item[(b)] If the wave goes through a polarizer oriented at an angle $\pi/4$ with respect to the direction of electric field polarization, find the amplitude of the transmitted electric field.
+\end{enumerate}
+\noindent
+
+\vspace*{0.3cm}
+\textbf{Q4:} A long cylindrical conductor has inner radius $a$ and outer radius $R$ ($a<R$). A steady total current $I$ is uniformly distributed throughout the conducting material. Determine the volume current density $\vec J$ and find the magnetic field magnitude $B(s)$ in the regions $0\le s<a$, $a<s<R$, and $s>R$. 
+
+\vspace*{0.8cm}
+\begin{center}
+\fbox{%
+\begin{minipage}{0.96\textwidth}
+\begin{center}
+\textbf{\underline{Maxwell's equations}}
+\end{center}
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{align*}
+\oint_S \vec{E} \cdot d\vec{a} &= \frac{Q_{\mathrm{enc}}}{\varepsilon_0} \\
+\oint_S \vec{B} \cdot d\vec{a} &= 0 \\
+\oint_C \vec{E} \cdot d\vec{\ell} &= -\frac{d}{dt}\int_S \vec{B} \cdot d\vec{a} \\
+\oint_C \vec{B} \cdot d\vec{\ell} &= \mu_0 I_{\mathrm{enc}} + \mu_0\varepsilon_0 \frac{d}{dt}\int_S \vec{E} \cdot d\vec{a}
+\end{align*}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{align*}
+\nabla \cdot \vec{E} &= \frac{\rho}{\varepsilon_0} \\
+\nabla \cdot \vec{B} &= 0 \\
+\nabla \times \vec{E} &= -\frac{\partial \vec{B}}{\partial t} \\
+\nabla \times \vec{B} &= \mu_0 \vec{J} + \mu_0\varepsilon_0 \frac{\partial \vec{E}}{\partial t}
+\end{align*}
+\end{minipage}
+\end{minipage}%
+}
+\end{center}
+
+\end{document}
+

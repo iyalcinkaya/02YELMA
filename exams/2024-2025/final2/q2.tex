@@ -1,0 +1,75 @@
+\section*{Question 2}
+Consider a long, straight cylindrical conductor with radius $R$. The conductor carries a current $I$ uniformly distributed across its cross-sectional area. Surrounding the conductor is a cylindrical shell with an inner radius $a$ (where $a>R$) and outer radius $b$ (where $b>a$). The shell carries a current $-I$ uniformly distributed across its cross-sectional area in the opposite direction.
+\begin{enumerate}
+\item[(a)] Find the magnetic field at a distance $r$ from the axis of the conductor for the following regions: $ 0 \leqslant r \leq R$, $ R \leqslant r \leq a$, $ a \leqslant r \leq b$ and $r \geqslant b$ --- \textit{0.8 pts}
+\item[(b)] Sketch the magnetic field as a function of $r$ --- \textit{0.2 pts}
+\end{enumerate}
+
+
+\section*{Solution:}
+\begin{solution}
+    We apply Ampère's Law:
+    \[
+    \oint \vec{B} \cdot d\vec{\ell} = \mu_0 I_{\text{enc}} \Rightarrow B(2\pi r) = \mu_0 I_{\text{enc}}
+    \]
+
+
+\noindent
+\textbf{Region I: $0 \leq r \leq R$}:
+
+\noindent
+The current is uniformly distributed, so current enclosed by a circular Amperian loop of radius $r$ is:
+    \[
+    I_{\text{enc}} = I \cdot \frac{\pi r^2}{\pi R^2} = I \cdot \frac{r^2}{R^2}
+    \]
+    Hence:
+    \[
+    B = \frac{\mu_0 I r}{2\pi R^2}
+    \]
+
+\noindent
+\textbf{Region II: $R \leq r \leq a$}:
+
+\noindent
+    The entire central conductor is enclosed, and the shell does not contribute here:
+    \[
+    I_{\text{enc}} = I \Rightarrow B = \frac{\mu_0 I}{2\pi r}
+    \]
+
+    \noindent
+    \textbf{Region III: $a \leq r \leq b$}:
+
+    \noindent
+    Now part of the return current in the shell is enclosed. The current density in the shell is:
+    \[
+    J_{\text{shell}} = \frac{-I}{\pi(b^2 - a^2)}
+    \]
+    The area of the shell enclosed between $a$ and $r$ is:
+    \[
+    A = \pi (r^2 - a^2)
+    \]
+    So the current enclosed from the shell is:
+    \[
+    I_{\text{shell}}(r) = J_{\text{shell}} \cdot A = -I \cdot \frac{r^2 - a^2}{b^2 - a^2}
+    \]
+    Total current enclosed:
+    \[
+    I_{\text{enc}} = I + \left(-I \cdot \frac{r^2 - a^2}{b^2 - a^2} \right)
+    = I \left(1 - \frac{r^2 - a^2}{b^2 - a^2} \right)
+    \]
+    Then:
+    \[
+    B = \frac{\mu_0 I}{2\pi r} \left(1 - \frac{r^2 - a^2}{b^2 - a^2} \right)
+    \]
+
+    \medskip
+    \textbf{Region IV: $r \geq b$}
+
+    The total current enclosed is:
+    \[
+    I_{\text{enc}} = I + (-I) = 0 \Rightarrow B = 0
+    \]
+
+
+
+\end{solution}

@@ -1,0 +1,265 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{tcolorbox}
+\usepackage[margin=1in]{geometry}
+
+\setlength{\fboxsep}{5pt}
+\setlength{\fboxrule}{1pt}
+
+\title{02ELMA: Unanswered Questions from You \\ 
+(2024-2025 Summer)}
+\author{İskender Yalçınkaya}
+\date{\today}
+\begin{document}
+\maketitle
+
+\subsection*{QUESTION:}
+In electrostatics, the multipole expansion describes how the electric potential is influenced by the arrangement of charges. The monopole term corresponds to the total charge (like a point charge), the dipole term to a pair of opposite charges, and the quadrupole term to a system of four charges with alternating signs. In magnetostatics, the multipole expansion of the vector potential is different: there is no monopole term (since magnetic monopoles do not exist), and the dipole term corresponds to a magnetic dipole (like a current loop or a bar magnet).
+
+\noindent
+\emph{Ahmad --- What kind of physical system would correspond to the quadrupole term in magnetostatics? Does such a system physically exist?}
+
+\subsection*{ANSWER:}
+The quadrupole term arises from arrangements where the net current and net dipole moment are both zero, but there is still a nonzero spatial distribution of currents or magnetic moments. Here are some real-world examples:
+
+\begin{itemize}
+    \item We can arrange four bar magnets around a circle, alternating N–S–N–S. At the center the net dipole vanishes, and the field lines have the characteristic four-lobe pattern of a quadrupole.
+    \item Two identical circular coils separated by distance $d$, carrying equal currents but in opposite directions. Near the midpoint between them the field has zero dipole component and a leading quadrupolar variation and leads to a quadrupole field. These setups can be used for magnetic trapping.
+\end{itemize}
+
+\newpage
+
+\subsection*{QUESTION:}
+\emph{Shoushi --- If I have a closed current-carrying loop with current $I$ but the loop has an arbitrary shape such that it’s impossible to define a single plane containing all the points of the loop, is it still possible to define a magnetic dipole moment for this loop?}
+
+\subsection*{ANSWER:}
+Yes, it is still possible to define a magnetic dipole moment for a closed current-carrying loop with an arbitrary shape. The magnetic dipole moment $\mathbf{m}$ for a current loop is generally given by the formula:
+
+\[
+\mathbf{m} = \frac{I}{2} \int_{\mathcal{C}} \mathbf{r} \times d\mathbf{l}
+\]
+\noindent
+where $\mathcal{C}$ is the closed curve of the loop, $\mathbf{r}$ is the position vector from the center of the loop to the point on the loop, and $d\mathbf{l}$ is the differential length element along the loop.
+
+Even if the loop is not planar, this integral can still be computed. The key point is that the magnetic dipole moment is a vector quantity that depends on the current distribution and the geometry of the loop. As long as the loop is closed and carries a current, a magnetic dipole moment can be defined.
+Assume that you have a loop in 3D space, and the wire’s path traces out a sinusoidal shape—like a wavy ribbon that closes on itself. Mathematically, suppose the wire path is parameterized as:
+
+\[
+\mathbf{r}(t) = (x(t), y(t), z(t))
+\]
+\noindent
+Even though the loop is wavy and not confined to a single plane, the magnetic dipole moment is still well-defined:
+\[
+\mathbf{m} = \frac{I}{2} \int_{\mathcal{C}} \mathbf{r}(t) \times \frac{d\mathbf{r}}{dt} dt
+\]
+\noindent
+where $\frac{d\mathbf{r}}{dt}$ is the tangent vector to the loop at each point. This integral captures the contributions of the current flowing through the entire loop, regardless of its shape.
+
+\newpage
+
+
+\subsection*{QUESTION:}
+\emph{Leorhii --- Consider a spherical half-shell (a hemisphere) of radius $R$ with a uniform surface charge density $\sigma$. The half-shell lies below the $xy$-plane, with its center at the origin. Calculate the electric field at the center of the full sphere (the origin), due to this half-shell.} 
+\subsection*{ANSWER:}
+The electric field due to a uniformly charged surface can be calculated by integrating the contributions from each infinitesimal charge element on the surface of the half-shell. The area element on the half-shell can be expressed in spherical coordinates as:
+
+\[
+dA = R^2 \sin \theta \, d\theta \, d\phi
+\]
+\noindent
+where $\theta$ is the polar angle (measured from the positive $z$-axis) and $\phi$ is the azimuthal angle (measured in the $xy$-plane). The electric field contribution from each area element $dA$ at the origin can be expressed as:
+
+\[
+d\mathbf{E} = \frac{1}{4\pi \epsilon_0} \frac{\sigma \, dA}{R^2} \hat{\mathbf{r}}
+\]
+\noindent
+where $\hat{\mathbf{r}}$ is the unit vector pointing from the area element to the origin. Due to the symmetry of the problem, the horizontal components of the electric field (in the $xy$-plane) will cancel out when integrated over the entire half-shell. Therefore, we only need to consider the vertical component (along the $z$-axis). The vertical component of the electric field contribution from the area element is:
+
+\[
+dE_z = dE \cos \theta = \frac{1}{4\pi \epsilon_0} \frac{\sigma \, dA}{R^2} \cos \theta
+\]
+\noindent
+Integrating over the half-shell, we have:
+
+\[
+E_z = \int_0^{2\pi} \int_0^{\pi/2} dE_z = \int_0^{2\pi} \int_0^{\pi/2} \frac{1}{4\pi \epsilon_0} \frac{\sigma \, R^2 \sin \theta \, d\theta \, d\phi}{R^2} \cos \theta
+\]
+
+\[
+= \frac{\sigma}{4\pi \epsilon_0} \int_0^{2\pi} d\phi \int_0^{\pi/2} \sin \theta \cos \theta \, d\theta
+\]
+\noindent
+The integral over $\phi$ gives a factor of $2\pi$, and the integral over $\theta$ can be evaluated as:
+
+\[
+\int_0^{\pi/2} \sin \theta \cos \theta \, d\theta = \frac{1}{2} \int_0^{\pi/2} \sin(2\theta) \, d\theta = \frac{1}{2} \left[-\frac{1}{2} \cos(2\theta)\right]_0^{\pi/2} = \frac{1}{2}
+\]
+\noindent
+Putting it all together, we find:
+
+\[
+E_z = \frac{\sigma}{4\pi \epsilon_0} (2\pi) \left(\frac{1}{2}\right) = \frac{\sigma}{4\epsilon_0}
+\]
+\noindent
+Thus, the electric field at the center of the full sphere (the origin), due to the half-shell, is:
+
+\[
+\mathbf{E} = E_z \hat{\mathbf{z}} = \frac{\sigma}{4\epsilon_0} \hat{\mathbf{z}}
+\]
+
+\newpage
+
+\subsection*{QUESTION:}
+\emph{Yaroslav --- What happens if a polarized light beam goes through a very strong electric field in vacuum? Does it get deflected?}
+
+\subsection*{ANSWER:}
+Even though light has an electric field, when it passes through a ``very strong'' electric field in vacuum, it does not get deflected. The electric field does not interact with the light in a way that would cause a change in its trajectory. This phenomenon is due to the linear nature of Maxwell's equations, which govern the behavior of electromagnetic fields. Let me explain what I mean by the \emph{linearity} of Maxwell’s equations.  In vacuum,
+\[
+\begin{aligned}
+\nabla\cdot\mathbf{E} &= 0,\\
+\nabla\cdot\mathbf{B} &= 0,\\
+\nabla\times\mathbf{E} &= -\frac{\partial\mathbf{B}}{\partial t},\\
+\nabla\times\mathbf{B} &= \mu_0\varepsilon_0\,\frac{\partial\mathbf{E}}{\partial t},
+\end{aligned}
+\]
+are \emph{linear} in the fields \(\mathbf{E}\) and \(\mathbf{B}\).  Hence if
+\[
+(\mathbf{E}_0(\mathbf{r}),\,\mathbf{B}_0(\mathbf{r}))
+\quad\text{and}\quad
+(\mathbf{E}_1(\mathbf{r},t),\,\mathbf{B}_1(\mathbf{r},t))
+\]
+are two solutions (one static, one a propagating wave), then
+\[
+\bigl(\mathbf{E}_0 + \mathbf{E}_1,\;\mathbf{B}_0 + \mathbf{B}_1\bigr)
+\]
+is also an exact solution.  In particular:
+
+\begin{itemize}
+  \item \textbf{Static field} \((\mathbf{E}_0,\mathbf{B}_0)\) obeys
+    \(\nabla\times\mathbf{E}_0=0\), \(\nabla\times\mathbf{B}_0=0\),
+    \(\nabla\cdot\mathbf{E}_0=0\), \(\nabla\cdot\mathbf{B}_0=0\),
+    and \(\partial_t\mathbf{E}_0=\partial_t\mathbf{B}_0=0\).
+  \item \textbf{Light wave} \((\mathbf{E}_1,\mathbf{B}_1)\) obeys the homogeneous wave equations
+    \[
+      \nabla^2\mathbf{E}_1 - \mu_0\varepsilon_0\frac{\partial^2\mathbf{E}_1}{\partial t^2} = \mathbf{0},
+      \quad
+      \nabla^2\mathbf{B}_1 - \mu_0\varepsilon_0\frac{\partial^2\mathbf{B}_1}{\partial t^2} = \mathbf{0}.
+    \]
+\end{itemize}
+\noindent
+Therefore, substituting
+\[
+\mathbf{E} = \mathbf{E}_0 + \mathbf{E}_1,\qquad
+\mathbf{B} = \mathbf{B}_0 + \mathbf{B}_1
+\]
+into Maxwell’s equations produces two independent sets of equations (one for the static field, one for the wave), with \emph{no} cross‐coupling or mixing terms. If there was any quadratic or higher order terms in the equations, they would couple the two solutions, and as a result of this, the static field could influence the wave propagation. However Maxwell's equations are linear, and hence, classically, a static background field does not influence the propagation of a small‐amplitude light wave.
+\noindent
+This is what the \emph{classical field theory} says. However, according to the principles of \emph{quantum electrodynamics (QED)}, the presence of a strong electric field can lead to phenomena such as vacuum polarization, where virtual particle-antiparticle pairs are created. This can affect the propagation of light in the presence of strong fields, but the effect is generally very small and not noticeable in everyday situations.
+
+In summary, while a strong electric field in vacuum does not deflect a light beam in the classical sense, it can lead to subtle quantum effects that may influence the behavior of light.
+
+\newpage
+\subsection*{QUESTION:}
+\emph{Fedir --- In Example 8.1 (Griffiths - Introduction to Electrodynamics, 3rd ed.), what if we had a current density instead of a homogeneous current $I$? }
+
+
+\subsection*{ANSWER:}
+
+
+
+When current flows down a cylindrical wire of radius \(a\) and length \(L\), work is done, which shows up as Joule heating of the wire. The energy per unit time delivered to the wire can be calculated using the Poynting vector. Assume that the current density \(\mathbf{J}(s)\) in the wire is given by
+\begin{equation*}
+\mathbf{J}(s) = J_0 \frac{s}{a}\hat{\mathbf{z}}
+\end{equation*}
+\noindent
+goes through a cylindrical wire of radius \(a\) and length \(L\) (\(z\)-axis is the axis of the wire and we consider cylindrical coordinates ($s,\phi,z$)). 
+
+\begin{tcolorbox}[colback=yellow!20!white, colframe=blue!75!black, title=Hold on a second!]
+Could we choose \(\mathbf{J}(s)\) to be a function of \(z\) instead? No, because you’d be piling up (or depleting) charge in the bulk of the wire, which would violate steady state. In practice what happens when you attempt a \(z\)-varying \(\mathbf{J}\) is that a surface or volume charge distribution builds itself up until it re-shapes the fields so that the divergence condition is satisfied. Therefore, the choice of \(\mathbf{J}\) as a function of \(s\) is the physically meaningful one.
+\end{tcolorbox}
+\noindent
+To find the electric field \(\mathbf{E}\) inside the wire, we can use Ohm's law:
+\[
+\mathbf{J} = \sigma \mathbf{E},
+\]
+where \(\sigma\) is the conductivity of the wire material. Rearranging and substituting gives:
+\[
+\mathbf{E}(s) = \frac{1}{\sigma} \mathbf{J} = \frac{J_0}{\sigma a} s \hat{\mathbf{z}}.
+\]
+\noindent
+This shows that the electric field inside the wire is linearly proportional to the distance from the center of the wire. To find the magnetic field \(\mathbf{B}\) inside the wire, we can use Ampère's law in the form of
+\[
+\oint_{\mathcal C}\mathbf{B}\cdot d\boldsymbol{\ell}
+=\mu_{0}\,I_{\mathrm{enc}}\,,
+\]
+where \(\mathcal C\) is a circle of radius \(s\) around the \(x\)-axis.  By symmetry \(\mathbf{B}=B_{\phi}(s)\,\hat{\boldsymbol\phi}\), so
+\[
+B_{\phi}(s)\,(2\pi s)
+=\mu_{0}\,I_{\mathrm{enc}}(s)\,.
+\]
+The enclosed current is
+\[
+I_{\mathrm{enc}}(s)
+=\int_{0}^{s}J(s')\,(2\pi s'\,ds')
+=\int_{0}^{s}J_{0}\,\frac{s'}{a}\,2\pi s'\,ds'
+=\frac{2\pi J_{0}}{a}\int_{0}^{s}s'^{2}\,ds'
+=\frac{2\pi J_{0}}{a}\,\frac{s^{3}}{3}\,.
+\]
+Hence
+\[
+B_{\phi}(s)
+=\frac{\mu_{0}\,I_{\mathrm{enc}}(s)}{2\pi s}
+=\frac{\mu_{0}}{2\pi s}
+\;\frac{2\pi J_{0}}{a}\,\frac{s^{3}}{3}
+=\frac{\mu_{0}\,J_{0}}{3\,a}\,s^{2}\,,
+\]
+or in vector form
+\[
+\mathbf{B}(s)
+=\frac{\mu_{0}\,J_{0}}{3\,a}\,s^{2}\,\hat{\boldsymbol\phi}
+\quad (0\le s\le a)\,.
+\]
+\noindent
+The Poynting vector \(\mathbf{S}\) is given by
+\[
+\mathbf{S} = \frac{1}{\mu_0}\mathbf{E} \times \mathbf{B}.
+\]
+\noindent
+Substituting the expressions for \(\mathbf{E}(s)\) and \(\mathbf{B}(s)\), we find
+\[
+\mathbf{S}(s) = \frac{1}{\mu_0}\left(\frac{J_0}{\sigma a} s \hat{\mathbf{z}}\right) \times \left(\frac{\mu_{0} J_{0}}{3 a} s^{2} \hat{\boldsymbol\phi}\right).
+\]
+Using the right-hand rule, we find that
+\[
+\mathbf{S}(s) = -\frac{J_0 \mu_{0} J_{0}}{3 \sigma a^{2} \mu_0} s^{3} \hat{\mathbf{s}}=-\frac{J_0^{2}}{3 \sigma a^{2}} s^{3} \hat{\mathbf{s}}.
+\]
+This shows that the Poynting vector points in the $-s$-direction (radially inward) and is proportional to the cube of the distance from the center of the wire. Only the outer surface \(s=a\) actually imports energy from outside; surfaces at \(s<a\) merely transmit it inward. Therefore, the total power delivered to the wire is given by integrating the Poynting vector over the surface of the wire:
+\[P = \int_{\text{surface}}\mathbf{S}(A) \cdot d\mathbf{a} = \int_{\text{surface}} -\frac{J_0^{2}}{3 \sigma a^{2}} a^{3}dA = -\frac{J_0^{2}}{3 \sigma} a (2\pi a L) = -\frac{2\pi J_0^{2} a^2 L}{3 \sigma}.
+\]
+\noindent
+Is this result compatible with the Joule heating formula $P=VI$? Yes, it is. The total current flowing through the wire is given by
+\[I = \int_{0}^{a} J(s) (2\pi s) ds = \int_{0}^{a} J_0 \frac{s}{a} (2\pi s) ds = \frac{2\pi J_0}{a} \int_{0}^{a} s^2 ds = \frac{2\pi J_0 a^2}{3}.\]
+\noindent
+The electric potential difference between the two end faces of the cylinder is most naturally defined by the line integral of the longitudinal electric field 
+$E_z$ between $z=0$ and $z=L$ taken along a field line at a fixed $s$. In practice, the current is fed in (and out) at the outer cylindrical surface ($s=a$), so we evaluate the potential drop along a path at $s=a$. Thus,
+\[
+V = \int_{0}^{L} E_z(s=a)\, dz = E_z(s=a) \cdot L = \frac{J_0}{\sigma a} a \cdot L = \frac{J_0 L}{\sigma}.
+\]
+\noindent
+Now, we can calculate the power delivered to the wire using the formula \(P = VI\):
+\[
+P = V I = \left(\frac{J_0 L}{\sigma}\right) \left(\frac{2\pi J_0 a^2}{3}\right) = \frac{2\pi J_0^2 a^2 L}{3 \sigma}.
+\]
+\noindent
+This matches the result we obtained using the Poynting vector, confirming that the energy delivered to the wire is consistent with Joule heating.
+\newpage
+\subsection*{QUESTION:}
+\emph{Yaroslav and others --- There was one more question about the divergence of the vector field $\mathbf{f}(x,y,z)= x^2 \hat{\mathbf{x}} + y^2 \hat{\mathbf{y}} + z^2 \hat{\mathbf{z}}$, which is related with the 4th question in the 2nd homework. However, I do not remember what the exact issue was. If you still remember it and still want to see the answer, send me and email describing the problem.}
+
+\subsection*{ANSWER:}
+To be potentially answered...
+\end{document}
