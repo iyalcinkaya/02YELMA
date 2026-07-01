@@ -83,19 +83,179 @@ B(\phi,t)\,(2\pi s)
 =
 \mu_0 I(t) \implies \boxed{\vec B(\phi,t)
 =
-\frac{\mu_0 I(t)}{2\pi s}\,\hat \phi,
+\frac{\mu_0 I_0 \cos(\omega t)}{2\pi s}\,\hat \phi,
 ~~\text{for}~~a<s<b.
 }
 \]
+In region \(s>b\), the net current enclosed by the Amperian loop is zero, so \(\vec B(\phi,t)=0\).
+
+(b) The magnetic energy density is given by
+
+\[
+u_B=\frac{B^2}{2\mu_0}.
+\]
+
+The instantaneous magnetic energy stored per unit length is obtained by integrating over the vacuum region between the conductors:
+
+\[
+\frac{U(t)}{L}
+=
+\int_a^b
+\frac{B^2(r,t)}{2\mu_0}\,(2\pi r\,dr)=\int_a^b
+\frac{1}{2\mu_0}
+\left(
+\frac{\mu_0 I(t)}{2\pi r}
+\right)^2
+(2\pi r\,dr)=\frac{\mu_0 I^2(t)}{4\pi}
+\ln\!\left(\frac{b}{a}\right)
+.
+\]
+
+\[
+\implies \boxed{
+\frac{U(t)}{L}
+=
+\frac{\mu_0 I_0^2}{4\pi}
+\cos^2(\omega t)
+\ln\!\left(\frac{b}{a}\right)
+}
+\]
+
+The inductance per unit length is defined through
+
+\[
+\frac{U}{L}
+=
+\frac{1}{2}\mathcal{L}I^2(t) \implies 
+\boxed{
+\mathcal{L}
+=
+\frac{\mu_0}{2\pi}
+\ln\!\left(\frac{b}{a}\right)
+}.
+\]
+
+\textbf{Q3:}The solenoid is at rest in frame $S'$ and produces the fields $\vec{E}'=0,~\vec{B}'=B_0\hat{z}'$. Frame $S'$ moves relative to the laboratory frame $S$ with velocity $\vec{v}=v\hat{x}$. Since the motion is along the $x$-direction, the field components parallel and perpendicular to $\vec v$ are $E'_{\parallel}=0,~E'_{\perp}=0$ and because $\vec B'$ points along $\hat z$, $B'_{\parallel}=0,~B'_{\perp}=B_0\hat z$. Using
+\[
+E_{\parallel}=E'_{\parallel},
+~~
+E_{\perp}=\gamma\left(E'_{\perp}-\vec v\times\vec B'\right) \qquad \implies \qquad E_{\parallel}=0,~~ \vec E
+=
+-\gamma(\vec v\times\vec B').
+\]
+
+Compute the cross product: $
+\vec v\times\vec B'
+=
+(v\hat x)\times(B_0\hat z)
+=
+vB_0(\hat x\times\hat z)
+=
+-vB_0\hat y \implies \boxed{
+\vec E
+=
+\gamma vB_0\,\hat y
+}.
+$
+
+Using
+\[
+B_{\parallel}=B'_{\parallel},
+~~
+B_{\perp}
+=
+\gamma\left(
+B'_{\perp}
++
+\frac{1}{c^2}\vec v\times\vec E'
+\right),~~\vec E'=0 \implies B_{\parallel}=0 \text{ and } \vec B
+=
+\gamma B_0\hat z.
+\]
 
 
-\textbf{Q3:}
+\[
+\implies
+\boxed{
+\vec B
+=
+\gamma B_0\,\hat z
+}.
+\]
 
-\textbf{Q4:} 
+
+\textbf{Q4:} The conducting rod of length \(L\) moves along horizontal rails and closes a circuit containing two resistors \(R\) (rod resistance) and \(R_0\). The total resistance is $R_{\mathrm{tot}}=R+R_0$. Let \(x(t)\) denote the position of the rod, so the enclosed area is $A(t)=Lx(t)$. The magnetic flux through the loop is $\Phi_B(t)=B(t)Lx(t)$. Using Faraday's law, $\mathcal E=-\frac{d\Phi_B}{dt}$, we obtain
+
+\[
+\mathcal E
+=
+-\frac{d}{dt}\left(BLx\right)
+=
+-L\left(x\frac{dB}{dt}+B\frac{dx}{dt}\right) \implies \mathcal E=L B(t)\left(\alpha x-\dot x\right) \implies \boxed{
+I(t)=\frac{L B_0 e^{-\alpha t}}{R+R_0}
+\left(\alpha x-\dot x\right)
+}.
+\]
+Direction follows Lenz's law:
+
+- If \(\alpha x>\dot x\), then \(d\Phi_B/dt<0\): the magnetic flux through the loop decreases, so the induced current must create magnetic field in the \(+\hat z\) direction.
+  Hence the current is \textbf{counterclockwise} (viewed from above).
+
+- If \(\alpha x<\dot x\), the flux increases and the current reverses:
+  \textbf{clockwise}.
+
+Initially (\(v(0)=0\)):
+
+\[
+I(0)=
+\frac{L B_0\alpha x_0}{R+R_0}>0,
+\]
+
+thus the initial current is counterclockwise.
 
 
+(b) The rod experiences magnetic force $\vec F = I\,\vec L\times \vec B$. The rod carries current along \(\hat y\), therefore $\vec F = I L B\,\hat x$.
 
+Substituting \(I\),
 
+\[
+F_x=
+\frac{L^2 B^2}{R+R_0}
+(\alpha x-\dot x) \implies m\ddot x
+=
+\frac{L^2 B_0^2 e^{-2\alpha t}}{R+R_0}
+(\alpha x-\dot x) \implies \boxed{
+m\ddot x
++
+\frac{L^2 B_0^2 e^{-2\alpha t}}{R+R_0}\dot x
+-
+\frac{\alpha L^2 B_0^2 e^{-2\alpha t}}{R+R_0}x
+=0
+}
+\]
+
+(c) 
+\[
+I(0)=
+\frac{L B_0\alpha x_0}{R+R_0} \implies P_R(0)=I(0)^2R
+=
+\frac{L^2B_0^2\alpha^2x_0^2\,R}
+{(R+R_0)^2}, \qquad P_{R_0}(0)=I(0)^2R_0
+=
+\frac{L^2B_0^2\alpha^2x_0^2\,R_0}
+{(R+R_0)^2}
+\]
+
+\[
+\implies
+\boxed{
+P_{\mathrm{tot}}(0)
+=
+P_R(0)+P_{R_0}(0)
+=
+\frac{L^2B_0^2\alpha^2x_0^2}{R+R_0}
+}
+\]
 
 \end{document}
 

@@ -7,7 +7,7 @@ Welcome to the repository for **02YELMA: Electricity and Magnetism**. Here you c
 * If you are taking the course for the first time, reading the [SYLLABUS](./syllabus/main.pdf) is strongly recommended.
 * The handwritten lecture notes are mostly derived from the textbook by David J. Griffiths, *Introduction to Electrodynamics* (3th edition). Students are encouraged to read the textbook for a more detailed explanation of the topics covered in the course.
 * The homework is provided for self study. Students are not required to return their solutions, but they are encouraged to work on them to better understand the material.
-* You can also find the midterm and final exam questions from previous years in the repository. (The solutions are incomplete, as this is still ongoing work.)
+* You can also find the midterm and final exam questions from previous years in the repository.
 
 If you wish to download all materials at once, click the green `<> Code` button at the top of this repository and select "Download ZIP", or clone the repository via Git. However, keep in mind that the repository can be updated during the semester, so please check for changes regularly.
 
